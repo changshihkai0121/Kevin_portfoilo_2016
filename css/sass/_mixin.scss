@@ -1,0 +1,8 @@
+// mixin setting
+@import 'variable';
+
+//setting containerBox left & right style
+@mixin container-Box($float:left){
+	width: 50%;
+	float: $float;
+}

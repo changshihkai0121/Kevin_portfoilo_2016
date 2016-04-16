@@ -1,0 +1,26 @@
+/*
+	common style
+*/
+
+@import 'compass';
+@import 'compass/reset'; // restart css
+@import 'variable'; // all varialbe
+@import 'mixin'; // setting all mixin style
+@import 'extend'; // setting all extend
+@import 'layout'; // setting common layout style
+@import 'modle'; // setting button table ... style
+@import 'websiteSetting';
+
+//font setting
+// @include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));
+#container {
+    @include border-radius(10px);
+    width: 100%;
+    margin: 30px 30px;
+    .container-before { /* right box */
+        @include container-Box(right);
+    }
+    .container-after { /* left box */
+    	@include container-Box;
+    }
+}
