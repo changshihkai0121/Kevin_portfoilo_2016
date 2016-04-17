@@ -1,0 +1,1059 @@
+@import 'compass/reset';
+@import "rwdset";
+@import 'susyset';
+@import 'breakpointset';
+@import "variable";
+@import "susy";
+@import "compass/css3";
+//basic setting for all page
+html {
+    font-family: $family;
+    @include fullWH;
+    -webkit-overflow-scrolling: $mobilescroll;
+}
+
+body {
+    @include fullW;
+}
+
+.background01 {
+    @include bg(home-background, png);
+}
+
+.background02 {
+    @include bg(about-background, png);
+}
+
+.background03 {
+    @include bg(contact-background, png);
+}
+
+#Top {
+    @include topsite;
+}
+
+#Next {
+    @include nextBtn;
+    z-index: 99;
+    img {
+        z-index: 99;
+        width: 60px;
+    }
+}
+
+.market {
+    color: $colorgreen;
+}
+
+.nextpage {
+    display: none;
+}
+
+.fontcolorwhite {
+    color: $colorwhite;
+}
+
+.index-shape {
+    @include shape;
+}
+
+.menumovestyle {
+    @include movestyle;
+    a {
+        img {
+            height: 30px;
+        }
+    }
+    .menu-icon {
+        display: none;
+    }
+    .nav-collapse {
+        width: 80%;
+        display: inline-block;
+        float: right;
+        text-align: right;
+        background: none;
+        font-size: $fontsize4;
+        div {
+            cursor: pointer;
+            display: inline-block;
+            @include linkstyle;
+            &:hover {
+                color: $color69;
+                text-decoration: none;
+            }
+            &:active {
+                color: $color69;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.index-s {
+    @include shape-s;
+}
+
+.work-contentTittle {
+    font-size: $fontsize7;
+    display: block;
+    width: 80%;
+}
+
+.work-contentInfo {
+    display: block;
+    padding-top: 10px;
+    width: 65%;
+}
+
+@include _break("mobile") {
+    .index-s {
+        display: none;
+    }
+    .bk-cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        p {
+            position: absolute;
+            bottom: 10px;
+            color: $colorwhite;
+            width: 100%;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 1;
+        }
+        &:active {
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 1;
+        }
+    }
+    .swiper-pagination {
+        top: -6% !important;
+        right: 50% !important;
+        position: absolute;
+        transform: rotate(270deg) !important;
+        -webkit-transform: rotate(270deg) !important;
+        -moz-transform: rotate(270deg) !important;
+        -o-transform: rotate(270deg) !important;
+        -ms-transform: rotate(270deg) !important;
+    }
+    .content-backgroundImg {
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/more1.png);
+    }
+    @for $i from 1 through 7 {
+        .contentshape-#{$i} {
+            width: 42.5%;
+            height: 150px;
+            position: absolute;
+        }
+    }
+    .contentshape-1,
+    .contentshape-4,
+    .contentshape-7 {
+        top: 5%;
+    }
+    .contentshape-2,
+    .contentshape-5 {
+        top: 34%;
+    }
+    .contentshape-3,
+    .contentshape-6 {
+        top: 63%;
+    }
+    .contentshape-1 {
+        left: 5%;
+    }
+    .contentshape-2 {
+        left: 5%;
+    }
+    .contentshape-3 {
+        left: 5%;
+    }
+    .contentshape-4 {
+        left: 52.5%;
+    }
+    .contentshape-5 {
+        left: 52.5%;
+    }
+    .contentshape-6 {
+        left: 52.5%;
+    }
+    .contentshape-7 {
+        display: none;
+    }
+    .index-shape {
+        width: 180px;
+        height: 180px;
+        bottom: inherit;
+        z-index: 1;
+    }
+    .navbar {
+        @include navBar;
+        img {
+            margin: 3% 0;
+        }
+        .menu-icon {
+            float: right;
+            display: block;
+            text-align: right;
+            width: 45%;
+            cursor: pointer;
+            img {
+                width: 25px;
+                padding-top: 10px;
+            }
+        }
+        .nav-collapse {
+            width: 100%;
+            height: 100%;
+            display: none;
+            float: right;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: $fontsize4;
+            div {
+                cursor: pointer;
+                display: block;
+                @include linkstyleM;
+                &:hover {
+                    color: $color69;
+                    text-decoration: none;
+                }
+                &:active {
+                    color: $color69;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .swiper-container {
+        width: 100%;
+        height: 600px;
+        margin: 0 auto;
+        .swiper-slide {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            .contentTtitle {
+                position: absolute;
+                width: 100%;
+                left: 0px;
+            }
+        }
+    }
+    .container {
+        width: $fullW;
+        height: $box768;
+        z-index: 1;
+        .contentS {
+            @include contenM;
+            .idea-contents {
+                vertical-align: middle;
+                display: table-cell;
+                width: 100%;
+                .idea-title {
+                    display: block;
+                    @include ideatitle;
+                    -webkit-box-reflect: $shadow;
+                    margin: 5% auto;
+                    width: 90%;
+                }
+                .idea-info {
+                    display: block;
+                    @include ideainfo;
+                    margin: 0 auto;
+                    width: 90%;
+                    p {
+                        font-size: $fontsize1;
+                        margin-bottom: 42.5px;
+                    }
+                }
+            }
+        }
+        .contentL {
+            z-index: 1;
+            @include contenM;
+            #slogan-content {
+                @include slogansite;
+                padding: 50% 15px 0 15px;
+                font-size: $fontsize8;
+                text-align: left;
+                p {
+                    line-height: 80px;
+                    z-index: 9;
+                }
+            }
+        }
+        .nextpage {
+            @include nextpage;
+        }
+        #map {
+            width: 96%;
+            height: 400px;
+            margin: 15px 2% 15px 2%;
+        }
+        .contentInfo {
+            width: 100%;
+            text-align: center;
+            .contentTtitle {
+                @include contenttitle;
+                padding: 12% 0 7% 0;
+            }
+            .contentdetail {
+                .logo5 .IconBox {
+                    width: 25%;
+                    display: inline-block;
+                    margin: 3% 0;
+                    img {
+                        width: 45%;
+                    }
+                }
+            }
+            //
+            .contactusdetail {
+                @include contactusdetail;
+                p {
+                    line-height: 1.4em;
+                    font-size: $fontsize1;
+                    margin-bottom: 42.5px;
+                }
+            }
+            .contactusinfo {
+                margin: 7% 0;
+                .contactusbox {
+                    width: 96%;
+                    margin: 15px 2% 15px 2%;
+                    font-size: $fontsize5;
+                    line-height: 1.4em;
+                    .contactusIcon {
+                        width: 24%;
+                        float: left;
+                    }
+                    .contactusinfotext {
+                        text-align: left;
+                        display: inline-block;
+                        width: 74%;
+                        font-size: $fontsize1;
+                        a {
+                            color: $colorwhite;
+                            text-decoration: none;
+                            &:hover {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                            &:active {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer {
+            width: 96%;
+            margin: 20% 2% 15px 2%;
+            .copyright {
+                padding: 0 0 3% 0;
+                line-height: 1.4em;
+            }
+            .shareIcon {
+                img {
+                    margin: auto 2%;
+                }
+            }
+        }
+    }
+    .clientsM {
+        height: 1200px;
+    }
+    .contactusM {
+        height: 1350px;
+    }
+}
+
+@include _break("pad") {
+    .index-s {
+        display: none;
+    }
+    .bk-cover p {
+        -webkit-transform: rotateY(-180deg) skewX(-30deg);
+        transform: rotateY(-180deg) skewX(-30deg);
+        -webkit-transform-origin: 50% 50% 0;
+        transform-origin: 50% 50% 0;
+        top: 40%;
+        left: 0%;
+        position: absolute;
+    }
+    .swiper-pagination {
+        top: 50% !important;
+        right: 10px!important;
+        transform: inherit !important;
+        -webkit-transform: inherit !important;
+        -moz-transform: inherit !important;
+        -o-transform: inherit !important;
+        -ms-transform: inherit !important;
+    }
+    @for $i from 1 through 7 {
+        .contentshape-#{$i} {
+            position: absolute;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            border: none;
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            background: #57a343;
+            -webkit-transform: rotateY(180deg) skewX(-30deg);
+            transform: rotateY(180deg) skewX(-30deg);
+            -webkit-transform-origin: 73.5% 50% 0;
+            transform-origin: 73.5% 50% 0;
+        }
+    }
+    .swiper-container {
+        height: 450px;
+    }
+    @for $i from 1 through 7 {
+        .contentshape-#{$i} {
+            width: 100px;
+            height: 160px;
+        }
+    }
+    .contentshape-1,
+    .contentshape-4,
+    .contentshape-7 {
+        top: 36%;
+    }
+    .contentshape-2,
+    .contentshape-5 {
+        top: 13%;
+    }
+    .contentshape-3,
+    .contentshape-6 {
+        top: 53%;
+    }
+    .contentshape-1 {
+        left: 3%;
+    }
+    .contentshape-2 {
+        left: 11%;
+    }
+    .contentshape-3 {
+        left: 24%;
+    }
+    .contentshape-4 {
+        left: 35%;
+    }
+    .contentshape-5 {
+        left: 43%;
+    }
+    .contentshape-6 {
+        left: 57%;
+    }
+    .contentshape-7 {
+        left: 68%;
+        display: block;
+    }
+    .index-shape {
+        z-index: -1;
+        bottom: 0px;
+        width: 400px;
+        height: 400px;
+    }
+    .contactusM {
+        height: 768px;
+    }
+    .clientsM {
+        height: 768px;
+    }
+    .navbar {
+        img {
+            margin: 0 0;
+        }
+        @include navBar;
+        .menu-icon {
+            float: right;
+            display: block;
+            text-align: right;
+            width: 45%;
+            cursor: pointer;
+            img {
+                width: 25px;
+            }
+        }
+        .nav-collapse {
+            width: 100%;
+            height: 100%;
+            display: none;
+            float: right;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: $fontsize4;
+            div {
+                cursor: pointer;
+                display: block;
+                @include linkstyleM;
+                &:hover {
+                    color: $color69;
+                    text-decoration: none;
+                }
+                &:active {
+                    color: $color69;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .container {
+        width: $fullW;
+        height: $box768;
+        z-index: 1;
+        .contentS {
+            width: $box768;
+            @include contentSet;
+            .idea-contents {
+                vertical-align: middle;
+                display: table-cell;
+                width: 100%;
+                .idea-title {
+                    display: block;
+                    @include ideatitle;
+                    -webkit-box-reflect: $shadow;
+                    margin: 5% auto;
+                    width: 50%;
+                }
+                .idea-info {
+                    display: block;
+                    @include ideainfo;
+                    margin: 0 auto;
+                    width: 50%;
+                    p {
+                        font-size: $fontsize4;
+                        margin-bottom: 42.5px;
+                    }
+                }
+            }
+        }
+        .contentL {
+            width: $box768;
+            @include contentSet;
+            #slogan-content {
+                @include slogansite;
+                padding: 20% 0 0 15%;
+                p {
+                    line-height: 110px;
+                }
+            }
+        }
+        .nextpage {
+            @include nextpage;
+        }
+        .contentInfo {
+            width: 100%;
+            text-align: center;
+            .contentTtitle {
+                @include contenttitle;
+                margin-bottom: 7%;
+            }
+            .contentdetail {
+                .logo5 .IconBox {
+                    width: 19%;
+                    display: inline-block;
+                    img {
+                        width: auto;
+                    }
+                }
+            }
+            //
+            .contactusdetail {
+                @include contactusdetail;
+                p {
+                    line-height: 1.4em;
+                    font-size: $fontsize1;
+                    margin-bottom: 42.5px;
+                }
+            }
+            .contactusinfo {
+                margin: 7% 0;
+                .contactusbox {
+                    width: 96%;
+                    margin: 15px 2% 15px 2%;
+                    font-size: $fontsize5;
+                    line-height: 1.4em;
+                    .contactusIcon {
+                        width: 15%;
+                        float: left;
+                    }
+                    .contactusinfotext {
+                        text-align: left;
+                        display: inline-block;
+                        width: 85%;
+                        font-size: $fontsize1;
+                        a {
+                            color: $colorwhite;
+                            text-decoration: none;
+                            &:hover {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                            &:active {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer {
+            width: 96%;
+            text-align: center;
+            margin: 20% 2% 15px 2%;
+            .copyright {
+                padding: 0 0 3% 0;
+                line-height: 1.4em;
+            }
+            .shareIcon {
+                img {
+                    margin: auto 2%;
+                }
+            }
+        }
+    }
+    .clientsM {
+        height: 1200px;
+    }
+    .contactusM {
+        height: 1350px;
+    }
+}
+
+@include _break("padHor") {
+    .index-s {
+        display: none;
+    }
+    @for $i from 1 through 7 {
+        .contentshape-#{$i} {
+            width: 100px;
+            height: 160px;
+        }
+    }
+    .contentshape-1,
+    .contentshape-4,
+    .contentshape-7 {
+        top: 39%;
+    }
+    .contentshape-2,
+    .contentshape-5 {
+        top: 17%;
+    }
+    .contentshape-3,
+    .contentshape-6 {
+        top: 53%;
+    }
+    .contentshape-1 {
+        left: 3%;
+    }
+    .contentshape-2 {
+        left: 11%;
+    }
+    .contentshape-3 {
+        left: 24%;
+    }
+    .contentshape-4 {
+        left: 35%;
+    }
+    .contentshape-5 {
+        left: 43%;
+    }
+    .contentshape-6 {
+        left: 57%;
+    }
+    .contentshape-7 {
+        left: 68%;
+    }
+    .oakre {
+        display: none;
+    }
+    .navbar {
+        .menu-icon {
+            display: none;
+        }
+        @include navBar;
+        .nav-collapse {
+            width: 84%;
+            display: inline-block;
+            float: right;
+            text-align: right;
+            background: inherit;
+            font-size: $fontsize4;
+            div {
+                cursor: pointer;
+                display: inline-block;
+                @include linkstyle;
+                margin: 0 3%;
+                &:hover {
+                    color: $color69;
+                    text-decoration: none;
+                }
+                &:active {
+                    color: $color69;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .swiper-container {
+        height: 500px;
+    }
+    .container {
+        width: $fullW;
+        height: $box768;
+        z-index: 1;
+        .contentS {
+            width: $box768;
+            @include contentSet;
+            .idea-contents {
+                vertical-align: middle;
+                display: table-cell;
+                width: 100%;
+                .idea-title {
+                    display: inline-block;
+                    @include ideatitle;
+                    -webkit-box-reflect: $shadow;
+                    margin-top: 0px;
+                    float: left;
+                    text-align: right;
+                }
+                .idea-info {
+                    display: inline-block;
+                    @include ideainfo;
+                    p {
+                        font-size: $fontsize4;
+                        margin-bottom: 42.5px;
+                    }
+                }
+            }
+        }
+        .contentL {
+            width: $box768;
+            @include contentSet;
+            #slogan-content {
+                @include slogansite;
+                padding-top: 25%;
+                p {
+                    line-height: 130px;
+                }
+            }
+        }
+        .nextpage {
+            @include nextpage;
+        }
+        .contentInfo {
+            width: 100%;
+            text-align: center;
+            .contentTtitle {
+                @include contenttitle;
+                margin-bottom: 7%;
+            }
+            .contentdetail {
+                .logo5 .IconBox {
+                    width: 19%;
+                    display: inline-block;
+                    img {
+                        width: auto;
+                    }
+                }
+            }
+            //
+            .contactusdetail {
+                @include contactusdetail;
+                p {
+                    line-height: 1.4em;
+                    font-size: $fontsize1;
+                    margin-bottom: 42.5px;
+                }
+            }
+            .contactusinfo {
+                margin: 7% 0;
+                .contactusbox {
+                    width: 96%;
+                    margin: 15px 2% 15px 2%;
+                    font-size: $fontsize5;
+                    line-height: 1.4em;
+                    .contactusIcon {
+                        width: 24%;
+                        float: left;
+                    }
+                    .contactusinfotext {
+                        text-align: left;
+                        display: inline-block;
+                        width: 74%;
+                        font-size: $fontsize1;
+                        a {
+                            color: $colorwhite;
+                            text-decoration: none;
+                            &:hover {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                            &:active {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer {
+            width: 96%;
+            margin: 20% 2% 15px 2%;
+            .copyright {
+                padding: 0 0 3% 0;
+                line-height: 1.4em;
+            }
+            .shareIcon {
+                img {
+                    margin: auto 2%;
+                }
+            }
+        }
+    }
+    .clientsM {
+        height: 1200px;
+    }
+    .contactusM {
+        height: 1350px;
+    }
+}
+
+@include _break("desktop") {
+    .index-shape {
+        width: 350px;
+        height: 350px;
+    }
+    .index-s {
+        width: 80px;
+        height: 80px;
+        transform-origin: 240px 50% 0;
+        bottom: 270px;
+    }
+    @for $i from 1 through 7 {
+        .contentshape-#{$i} {
+            width: 150px;
+            height: 240px;
+        }
+    }
+    .contentshape-1,
+    .contentshape-4,
+    .contentshape-7 {
+        top: 39%;
+    }
+    .contentshape-2,
+    .contentshape-5 {
+        top: 17%;
+    }
+    .contentshape-3,
+    .contentshape-6 {
+        top: 55%;
+    }
+    .contentshape-1 {
+        left: 0;
+    }
+    .contentshape-2 {
+        left: 8%;
+    }
+    .contentshape-3 {
+        left: 23%;
+    }
+    .contentshape-4 {
+        left: 34%;
+    }
+    .contentshape-5 {
+        left: 43%;
+    }
+    .contentshape-6 {
+        left: 58%;
+    }
+    .contentshape-7 {
+        left: 69%;
+    }
+    .oakre {
+        display: block;
+    }
+    .navbar {
+        .menu-icon {
+            display: none;
+        }
+        @include navBar;
+        .nav-collapse {
+            width: 80%;
+            display: inline-block;
+            float: right;
+            text-align: right;
+            background: inherit;
+            font-size: $fontsize4;
+            div {
+                cursor: pointer;
+                display: inline-block;
+                @include linkstyle;
+                &:hover {
+                    color: $color69;
+                    text-decoration: none;
+                }
+                &:active {
+                    color: $color69;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .swiper-container {
+        height: 700px;
+    }
+    .container {
+        width: $fullW;
+        height: $box1080;
+        z-index: 1;
+        .contentS {
+            width: $box768;
+            @include contentSet;
+            .idea-contents {
+                vertical-align: middle;
+                display: table-cell;
+                width: 100%;
+                .idea-title {
+                    display: inline-block;
+                    @include ideatitle;
+                    -webkit-box-reflect: $shadow;
+                    margin-top: 0px;
+                    float: left;
+                    text-align: right;
+                }
+                .idea-info {
+                    display: inline-block;
+                    @include ideainfo;
+                    p {
+                        font-size: $fontsize4;
+                        margin-bottom: 42.5px;
+                    }
+                }
+            }
+        }
+        .contentL {
+            width: $box1024;
+            @include contentSet;
+            #slogan-content {
+                @include slogansite;
+                padding-top: 27%;
+                p {
+                    line-height: 140px;
+                }
+            }
+        }
+        .nextpage {
+            @include nextpage;
+        }
+        #map {
+            width: 50%;
+            height: 400px;
+            margin: 0px 2% 15px 2%;
+            float: right;
+        }
+        //0317
+        .contentInfo {
+            width: 100%;
+            text-align: center;
+            .contentTtitle {
+                @include contenttitle;
+                margin-bottom: 7%;
+            }
+            .worktitlestyle {
+                padding: 7% 0 0 0;
+            }
+            .contentdetail {
+                .logo5 .IconBox {
+                    width: 19%;
+                    display: inline-block;
+                    img {
+                        width: auto;
+                    }
+                }
+            }
+            //
+            .contactusdetail {
+                @include contactusdetailD;
+                p {
+                    line-height: 1.4em;
+                    font-size: $fontsize1;
+                    margin-bottom: 42.5px;
+                }
+            }
+            .contactusinfo {
+                float: left;
+                margin: 0;
+                .contactusbox {
+                    width: 96%;
+                    margin: 15px 2% 15px 2%;
+                    font-size: $fontsize5;
+                    line-height: 1.4em;
+                    .contactusIcon {
+                        width: 24%;
+                        float: left;
+                    }
+                    .contactusinfotext {
+                        text-align: left;
+                        display: inline-block;
+                        width: 74%;
+                        font-size: $fontsize1;
+                        a {
+                            color: $colorwhite;
+                            text-decoration: none;
+                            &:hover {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                            &:active {
+                                color: $colorwhite;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer {
+            width: 100%;
+            float: right;
+            margin: 5% 0;
+            position: absolute;
+            bottom: 0px;
+            .copyright {
+                padding: 0 0 3% 0;
+                line-height: 1.4em;
+            }
+            .shareIcon {
+                img {
+                    margin: auto 2%;
+                }
+            }
+        }
+    }
+}

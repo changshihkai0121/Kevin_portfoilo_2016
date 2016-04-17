@@ -1,0 +1,59 @@
+/**
+=======================================================
+ 	Fonts setting
+ 	zh-tw => Kozuka Mincho Pro B, Kozuka Mincho Pro EL
+ 	en => TrajanPro-Bold, TrajanPro-Regular 
+=======================================================
+**/
+@font-face {
+  font-family: "Kozuka Mincho Pro B";
+  src: url("/fonts/KozMinPro-Bold.otf");
+  src: url("/fonts/KozMinPro-Bold.eot"), url("/fonts/KozMinPro-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/KozMinPro-Bold.woff") format("woff"), url("/fonts/KozMinPro-Bold.ttf") format("truetype"), url("/fonts/KozMinPro-Bold.svg#Kozuka Mincho Pro B") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Kozuka Mincho Pro B";
+    src: url("/fonts/KozMinPro-Bold.svg#Kozuka Mincho Pro B") format("svg");
+  }
+}
+@font-face {
+  font-family: "Kozuka Mincho Pro EL";
+  src: url("/fonts/KozMinPro-ExtraLight.otf");
+  src: url("/fonts/KozMinPro-ExtraLight.eot"), url("/fonts/KozMinPro-ExtraLight.eot?#iefix") format("embedded-opentype"), url("/fonts/KozMinPro-ExtraLight.woff") format("woff"), url("/fonts/KozMinPro-ExtraLight.ttf") format("truetype"), url("/fonts/KozMinPro-ExtraLight.svg#Kozuka Mincho Pro EL") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Kozuka Mincho Pro EL";
+    src: url("/fonts/KozMinPro-ExtraLight.svg#Kozuka Mincho Pro EL") format("svg");
+  }
+}
+@font-face {
+  font-family: "TrajanPro-Bold";
+  src: url("/fonts/TrajanPro-Bold.otf");
+  src: url("/fonts/TrajanPro-Bold.eot"), url("/fonts/TrajanPro-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/TrajanPro-Bold.woff") format("woff"), url("/fonts/TrajanPro-Bold.ttf") format("truetype"), url("/fonts/TrajanPro-Bold.svg#TrajanPro-Bold") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "TrajanPro-Bold";
+    src: url("/fonts/TrajanPro-Bold.svg#TrajanPro-Bold") format("svg");
+  }
+}
+@font-face {
+  font-family: "TrajanPro-Regular";
+  src: url("/fonts/TrajanPro-Regular.otf");
+  src: url("/fonts/TrajanPro-Regular.eot"), url("/fonts/TrajanPro-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/TrajanPro-Regular.woff") format("woff"), url("/fonts/TrajanPro-Regular.ttf") format("truetype"), url("/fonts/TrajanPro-Regular.svg#TrajanPro-Regular") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "TrajanPro-Regular";
+    src: url("/fonts/TrajanPro-Regular.svg#TrajanPro-Regular") format("svg");
+  }
+}
