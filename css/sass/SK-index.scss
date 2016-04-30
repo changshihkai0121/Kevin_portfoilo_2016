@@ -1,0 +1,231 @@
+/**
+=============================================================================
+ portfoilo of Shih-Kai of Index style
+=============================================================================
+**/
+
+@import 'SKportfoilo';
+.container {
+    @include fullWH;
+}
+
+@include _break("mobile") {
+    .container {
+        .content {
+            @include fullWH;
+            .countent-Time {
+                @include fullWH;
+                .contentChange {
+                    display: none;
+                }
+                #content-After {
+                    background-color: #5FB9B0;
+                    width: 100%;
+                    height: 50%;
+                    display: block;
+                }
+                #content-Before {
+                    width: 100%;
+                    height: 50%;
+                    background-color: #413D65;
+                    display: block;
+                }
+                .contentBox {
+                    display: none;
+                }
+            }
+            //toogle btn style & active
+            .toogle-Btn {
+                position: absolute;
+                left: 25%;
+                top: 20%;
+                @include basic_Btnsetting;
+                width: 50%;
+                height: 60%;
+                text-align: center;
+                input {
+                    @include fullWH;
+                    @include clean_allstyle;
+                    &:checked + label {
+                        @include liner_color(#eee, #ddd, #ccc, #eee);
+                        @include showdow_setting(0, 2px, 3px, 0px, 35px, 10px, 0px, 0px, 40px, 1px, 0px, -6px, 0px, rgba(0, 0, 0, 0.4), #888, #bbb, white);
+                    }
+                    &:checked:hover + label {
+                        @include showdow_setting(0, 2px, 3px, 0px, 35px, 10px, 0px, 0px, 40px, 1px, 0px, -6px, 0px, rgba(0, 0, 0, 0.4), #888, #bbb, white);
+                    }
+                    &:checked + label:before {
+                        z-index: 1;
+                        top: 55px;
+                        font-size: 2rem;
+                        color: #666;
+                    }
+                    &:checked + label:after {
+                        bottom: 9px;
+                        color: #aaa;
+                        text-shadow: none;
+                        z-index: 4;
+                        font-size: 2rem;
+                    }
+                }
+                label {
+                    display: block;
+                    position: absolute;
+                    top: 1px;
+                    right: 1px;
+                    bottom: 1px;
+                    left: 1px;
+                    @include liner_color(#eee, #ddd, #eee, #eee);
+                    @include showdow_setting(0, 2px, 3px, 0px, -38px, 10px, -5px, 0px, -40px, 1px, 0px, 5px, 2px, rgba(0, 0, 0, 0.4), #888, #bbb, white);
+                    // @include showdow_setting(0,2px,3px,0px,-1px,1px,0px,0px,-40px,1px,0px,-6px,0px,rgba(0, 0, 0, 0.4),#888,#bbb,white);
+                    // @include showdow_setting (2px, 3px, -1px, 1px, 0, -40px, 1px, -6px, 0, #888, #bbb);
+                    @include border_radius(12px);
+                    font: normal 11px Arial, Sans-Serif;
+                    color: #666;
+                    text-shadow: 0 1px 0 white;
+                    cursor: text;
+                    &:before {
+                        content: attr(data-off);
+                        position: absolute;
+                        top: 11px;
+                        right: 0;
+                        left: 0;
+                        z-index: 4;
+                        font-size: 2rem;
+                        color: #aaa;
+                    }
+                    &:after {
+                        content: attr(data-on);
+                        position: absolute;
+                        right: 0;
+                        bottom: 55px;
+                        left: 0;
+                        color: #666;
+                        text-shadow: 0 -1px 0 #eee;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        p {
+            font-size: 0.5rem;
+        }
+    }
+}
+
+@include _break("pad") {
+    .container {
+        .content {}
+    }
+}
+
+@include _break("padHor") {
+    #header {
+        top: 75px;
+        .logo {
+            img {
+                margin-left: 85px;
+            }
+        }
+        .mobile-menu {
+            display: none;
+        }
+    }
+    .container {
+        .content {
+            width: 96%;
+            height: 98%;
+            padding: 2% 2% 0px 2%;
+            .toogle-Btn {
+                display: none;
+            }
+            .countent-Time {
+                @include fullWH;
+                position: relative;
+                z-index: 2;
+                .contentChange {
+                    display: block;
+                    position: absolute;
+                    margin: 0 12%;
+                    width: 76%;
+                    .move-Icon {
+                        display: inline-block;
+                        margin: 15% 2%;
+                        @include fontsFamily_basicSetting(700);
+                        height: 220px;
+                        p {
+                            overflow: hidden;
+                            width: 60%;
+                            height: 100%;
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 12rem;
+                        }
+                    }
+                }
+                .contentBox {
+                    display: block;
+                    @include container-Box;
+                    .contentBox {
+                        position: absolute;
+                        overflow: hidden;
+                        .face-left {
+                            @include face-default;
+                            width: 203%;
+                            left: 0px;
+                        }
+                        .face-right {
+                            @include face-default;
+                            right: 0px;
+                            width: 197%;
+                        }
+                    }
+                }
+                #content-Before {
+                    @include container-Box(right);
+                    background-color: #413D65;
+                    .fontTime {
+                        margin-top: 50%;
+                        text-align: right;
+                        p {
+                            padding-right: 24%;
+                            @include font-timeStyle(2rem, white, right);
+                            span {
+                                @include font-timeStyle(2.8rem, white, right);
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                #content-After {
+                    width: 50%;
+                    height: 100%;
+                    background-color: #5FB9B0;
+                    .fontTime {
+                        margin-top: 50%;
+                        text-align: left;
+                        p {
+                            padding-left: 24%;
+                            @include font-timeStyle(2rem, white);
+                            span {
+                                @include font-timeStyle(2.8rem, white, right);
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        p {
+            font-size: 0.9375rem
+        }
+    }
+}
+
+@include _break("desktop") {
+    .container {
+        .content {}
+    }
+}

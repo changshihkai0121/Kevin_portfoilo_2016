@@ -1,4 +1,6 @@
 // website_susy & breakpoint & RWD setting
+@import "breakpoint"; 
+@import "susy";
 $susy: (
   	flow: ltr,
   	math: fluid,
@@ -12,7 +14,7 @@ $susy: (
   	global-box-sizing: content-box, 
   	last-flow: to,
   	debug: (
-  	  	image: show,
+  	  	image: hide,
   	  	color: rgba(#66f, .25),
   	  	output: background,
   	  	toggle: top right,
@@ -31,24 +33,25 @@ $break_layout :
 (
     mobile: 
     (
-        break: 0px,
+        break:  0px,
         layout: 4
     ), 
     pad: 
     (
-        break: 768px,
+        break:  768px,
         layout: 8
-    ), 
+    ),
     padHor:
     (
         break: 1024px,
         layout: 8
-    ),
+    ), 
     desktop: 
     (
-        break: 1200px,
+        break:  1200px,
         layout: 12
     )
+
 );
 
 // breakpoint setting

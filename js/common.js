@@ -49,12 +49,17 @@ $(function() {
             $(this).attr('src', $(this).attr('src').replace('.png', '.svg'));
         });
     } else {};
+    //menu btn click animation
+    $('.menu-btn').click(function() {
+        $('.menu-container').fadeIn();
+    });
+    //menu btn click animation end
 });
 /*  Jquery auto run function end */
 
 /* window resize action began */
 $(window).resize(function() {
-    objectSize();// include object size
+    objectSize(); // include object size
 });
 /* window resize action end */
 

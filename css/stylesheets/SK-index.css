@@ -1,0 +1,421 @@
+/**
+=============================================================================
+ portfoilo of Shih-Kai of Index style
+=============================================================================
+**/
+/**
+=============================================================================
+ portfoilo of Shih-Kai of common style
+=============================================================================
+**/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/**
+=======================================
+    --setting using font style--
+    zh-tw => Kozuka Mincho Pro B, Kozuka Mincho Pro EL
+    en => TrajanPro-Bold, TrajanPro-Regular 
+=======================================
+**/
+html {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.9375rem;
+  font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#header {
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  width: 100%;
+}
+#header .logo {
+  height: auto;
+  float: left;
+}
+#header .logo img {
+  margin-left: 20px;
+}
+#header .mobile-menu {
+  display: block;
+  float: right;
+  text-align: right;
+}
+#header .mobile-menu img {
+  margin-right: 20px;
+  width: 25px;
+}
+#header .mobile-menu .menu-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #2b1e31;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 35px;
+  color: white;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 0px) {
+  .container .content {
+    width: 100%;
+    height: 100%;
+  }
+  .container .content .countent-Time {
+    width: 100%;
+    height: 100%;
+  }
+  .container .content .countent-Time .contentChange {
+    display: none;
+  }
+  .container .content .countent-Time #content-After {
+    background-color: #5FB9B0;
+    width: 100%;
+    height: 50%;
+    display: block;
+  }
+  .container .content .countent-Time #content-Before {
+    width: 100%;
+    height: 50%;
+    background-color: #413D65;
+    display: block;
+  }
+  .container .content .countent-Time .contentBox {
+    display: none;
+  }
+  .container .content .toogle-Btn {
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    background-color: #bbb;
+    width: 50%;
+    height: 60%;
+    text-align: center;
+  }
+  .container .content .toogle-Btn input {
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .container .content .toogle-Btn input:checked + label {
+    background-image: -webkit-linear-gradient(top, #eee 0%, #ddd 50%, #ccc 50%, #eee 100%);
+    background-image: -moz-linear-gradient(top, #eee 0%, #ddd 50%, #ccc 50%, #eee 100%);
+    background-image: -ms-linear-gradient(top, #eee 0%, #ddd 50%, #ccc 50%, #eee 100%);
+    background-image: -o-linear-gradient(top, #eee 0%, #ddd 50%, #ccc 50%, #eee 100%);
+    background-image: linear-gradient(to bottom, #eeeeee 0%, #dddddd 50%, #cccccc 50%, #eeeeee 100%);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px 35px 10px 0px #888, inset 0px 40px 1px #bbb, inset 0px -6px 0px white;
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px 35px 10px 0px #888, inset 0px 40px 1px #bbb, inset 0px -6px 0px white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px 35px 10px 0px #888, inset 0px 40px 1px #bbb, inset 0px -6px 0px white;
+  }
+  .container .content .toogle-Btn input:checked:hover + label {
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px 35px 10px 0px #888, inset 0px 40px 1px #bbb, inset 0px -6px 0px white;
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px 35px 10px 0px #888, inset 0px 40px 1px #bbb, inset 0px -6px 0px white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px 35px 10px 0px #888, inset 0px 40px 1px #bbb, inset 0px -6px 0px white;
+  }
+  .container .content .toogle-Btn input:checked + label:before {
+    z-index: 1;
+    top: 55px;
+    font-size: 2rem;
+    color: #666;
+  }
+  .container .content .toogle-Btn input:checked + label:after {
+    bottom: 9px;
+    color: #aaa;
+    text-shadow: none;
+    z-index: 4;
+    font-size: 2rem;
+  }
+  .container .content .toogle-Btn label {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: -webkit-linear-gradient(top, #eee 0%, #ddd 50%, #eee 50%, #eee 100%);
+    background-image: -moz-linear-gradient(top, #eee 0%, #ddd 50%, #eee 50%, #eee 100%);
+    background-image: -ms-linear-gradient(top, #eee 0%, #ddd 50%, #eee 50%, #eee 100%);
+    background-image: -o-linear-gradient(top, #eee 0%, #ddd 50%, #eee 50%, #eee 100%);
+    background-image: linear-gradient(to bottom, #eeeeee 0%, #dddddd 50%, #eeeeee 50%, #eeeeee 100%);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px -38px 10px -5px #888, inset 0px -40px 1px #bbb, inset 0px 5px 2px white;
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px -38px 10px -5px #888, inset 0px -40px 1px #bbb, inset 0px 5px 2px white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4), inset 0px -38px 10px -5px #888, inset 0px -40px 1px #bbb, inset 0px 5px 2px white;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    font: normal 11px Arial, Sans-Serif;
+    color: #666;
+    text-shadow: 0 1px 0 white;
+    cursor: text;
+  }
+  .container .content .toogle-Btn label:before {
+    content: attr(data-off);
+    position: absolute;
+    top: 11px;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    font-size: 2rem;
+    color: #aaa;
+  }
+  .container .content .toogle-Btn label:after {
+    content: attr(data-on);
+    position: absolute;
+    right: 0;
+    bottom: 55px;
+    left: 0;
+    color: #666;
+    text-shadow: 0 -1px 0 #eee;
+    font-size: 2rem;
+  }
+
+  .copyright p {
+    font-size: 0.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #header {
+    top: 75px;
+  }
+  #header .logo img {
+    margin-left: 85px;
+  }
+  #header .mobile-menu {
+    display: none;
+  }
+
+  .container .content {
+    width: 96%;
+    height: 98%;
+    padding: 2% 2% 0px 2%;
+  }
+  .container .content .toogle-Btn {
+    display: none;
+  }
+  .container .content .countent-Time {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .container .content .countent-Time .contentChange {
+    display: block;
+    position: absolute;
+    margin: 0 12%;
+    width: 76%;
+  }
+  .container .content .countent-Time .contentChange .move-Icon {
+    display: inline-block;
+    margin: 15% 2%;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    height: 220px;
+  }
+  .container .content .countent-Time .contentChange .move-Icon p {
+    overflow: hidden;
+    width: 60%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12rem;
+  }
+  .container .content .countent-Time .contentBox {
+    display: block;
+    width: 50%;
+    height: 100%;
+    float: left;
+  }
+  .container .content .countent-Time .contentBox .contentBox {
+    position: absolute;
+    overflow: hidden;
+  }
+  .container .content .countent-Time .contentBox .contentBox .face-left {
+    text-align: center;
+    position: absolute;
+    bottom: -30%;
+    width: 203%;
+    left: 0px;
+  }
+  .container .content .countent-Time .contentBox .contentBox .face-right {
+    text-align: center;
+    position: absolute;
+    bottom: -30%;
+    right: 0px;
+    width: 197%;
+  }
+  .container .content .countent-Time #content-Before {
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color: #413D65;
+  }
+  .container .content .countent-Time #content-Before .fontTime {
+    margin-top: 50%;
+    text-align: right;
+  }
+  .container .content .countent-Time #content-Before .fontTime p {
+    padding-right: 24%;
+    color: white;
+    font-size: 2rem;
+    float: right;
+    opacity: 0;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .container .content .countent-Time #content-Before .fontTime p span {
+    color: white;
+    font-size: 2.8rem;
+    float: right;
+    opacity: 0;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 700;
+  }
+  .container .content .countent-Time #content-After {
+    width: 50%;
+    height: 100%;
+    background-color: #5FB9B0;
+  }
+  .container .content .countent-Time #content-After .fontTime {
+    margin-top: 50%;
+    text-align: left;
+  }
+  .container .content .countent-Time #content-After .fontTime p {
+    padding-left: 24%;
+    color: white;
+    font-size: 2rem;
+    float: left;
+    opacity: 0;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .container .content .countent-Time #content-After .fontTime p span {
+    color: white;
+    font-size: 2.8rem;
+    float: right;
+    opacity: 0;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 700;
+  }
+
+  .copyright p {
+    font-size: 0.9375rem;
+  }
+}
