@@ -19,9 +19,23 @@
             <img class="images-icon menu-btn" src="/images/mobile-menu.png" alt="mobile-menu-Icon">
             <div class="menu-container">
                 <ul>
-                    <li>ABOUT</li>
-                    <li>AFTER</li>
-                    <li>BEFORE</li>
+                    <li class="menu-logo">
+                        <a href="/">
+                            <img class="images-icon mobile-porfoiloLogo" src="/images/logo.png" alt="Shih Kai logo">
+                        </a>
+                    </li>
+                    <li class="closeMenu-Btn">
+                        <img class="images-icon" src="/images/menu-close.png" alt="mobile-menu-Icon">
+                    </li>
+                    <li class="menu-list">
+                        <a href="">ABOUT</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="">AFTER</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="">BEFORE</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -31,6 +45,10 @@
     </div>
     <div id="container" class="container">
         <div class="content">
+            <div id="touchBox">
+                <div class="touch-left"></div>
+                <div class="touch-right"></div>
+            </div>
             <div class="countent-Time">
                 <div id="content-Change" class="contentChange">
                     <div class="move-Icon">
@@ -78,14 +96,6 @@
             </div>
             <div class="content-Fonts">
             </div>
-            <!-- <div class="content-Face">
-                <div id="content-faceAfter" class="contentface">
-                    <img src="/images/now.png" alt="">
-                </div>
-                <div id="content-faceBefore" class="contentface">
-                    <img src="/images/before.png" alt="">
-                </div>
-            </div> -->
         </div>
     </div>
     <div id="footer">
@@ -94,7 +104,9 @@
         </div>
     </div>
 </body>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
 <script src="https://use.typekit.net/wel8vbx.js"></script>
 <script>
 try {
@@ -104,5 +116,6 @@ try {
 } catch (e) {}
 </script>
 <script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/pace.js"></script>
 
 </html>

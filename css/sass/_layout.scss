@@ -49,6 +49,7 @@ p {
         img {
             margin-right: 20px;
             width: 25px;
+            cursor: pointer;
         }
         .menu-container {
             display: none;
@@ -58,11 +59,40 @@ p {
             top: 0px;
             left: 0px;
             background-color: #2b1e31;
+            ul {
+                margin-top: 20px;
+                .closeMenu-Btn {
+                    position: absolute;
+                    right: 0;
+                    top: 20px;
+                }
+                .menu-list{
+                    margin: 18% 0;
+                }
+                li {
+                    text-align: center;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        letter-spacing: 2px;
+                        font-size: 1.8rem;
+                        &:hover{}
+                        &:active{}
+                    }
+                }
+            }
+        }
+        .menu-logo {
+            text-align: center;
+            .mobile-porfoiloLogo {
+                margin: 0 auto;
+            }
         }
     }
 }
 
 .copyright {
+    z-index: 9999;
     position: fixed;
     bottom: 35px;
     color: white;

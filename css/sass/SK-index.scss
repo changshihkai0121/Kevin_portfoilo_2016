@@ -147,8 +147,10 @@
                 .contentChange {
                     display: block;
                     position: absolute;
-                    margin: 0 12%;
-                    width: 76%;
+                    margin: 0 16%;
+                    width: 68%;
+                    text-align: center;
+                    z-index: 996;
                     .move-Icon {
                         display: inline-block;
                         margin: 15% 2%;
@@ -159,13 +161,17 @@
                             width: 60%;
                             height: 100%;
                             color: rgba(255, 255, 255, 0.5);
-                            font-size: 12rem;
+                            font-size: 8.3rem;
                         }
                     }
                 }
                 .contentBox {
                     display: block;
-                    @include container-Box;
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    position: relative;
+                    left: 0;
                     .contentBox {
                         position: absolute;
                         overflow: hidden;
@@ -181,15 +187,19 @@
                         }
                     }
                 }
-                #content-Before {
-                    @include container-Box(right);
-                    background-color: #413D65;
+                #content-After {
+                    @include container-Box(left);
+                    background-color: #5FB9B0;
+                    position: absolute;
+                    left: 0;
+                    z-index: 99;
                     .fontTime {
-                        margin-top: 50%;
-                        text-align: right;
+                        margin-top: 14%;
+                        text-align: left;
                         p {
-                            padding-right: 24%;
-                            @include font-timeStyle(2rem, white, right);
+                            padding-left: 6%;
+                            @include font-timeStyle(2rem, white);
+                            opacity: 0;
                             span {
                                 @include font-timeStyle(2.8rem, white, right);
                                 font-weight: 700;
@@ -197,16 +207,19 @@
                         }
                     }
                 }
-                #content-After {
-                    width: 50%;
-                    height: 100%;
-                    background-color: #5FB9B0;
+                #content-Before {
+                    @include container-Box(right);
+                    background-color: #413D65;
+                    position: absolute;
+                    right: 0;
+                    left: inherit;
                     .fontTime {
-                        margin-top: 50%;
-                        text-align: left;
+                        margin-top: 14%;
+                        text-align: right;
                         p {
-                            padding-left: 24%;
-                            @include font-timeStyle(2rem, white);
+                            padding-right: 6%;
+                            @include font-timeStyle(2rem, white, right);
+                            opacity: 0;
                             span {
                                 @include font-timeStyle(2.8rem, white, right);
                                 font-weight: 700;
@@ -215,6 +228,26 @@
                     }
                 }
             }
+            #touchBox {
+                width: 96%;
+                height: 98%;
+                position: absolute;
+                z-index: 998;
+                cursor: pointer;
+                .touch-left {
+                    left: 0;
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                }
+                .touch-right {
+                    right: 0;
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+            
         }
     }
     .copyright {
@@ -226,6 +259,16 @@
 
 @include _break("desktop") {
     .container {
-        .content {}
+        .content {
+            .countent-Time {
+                .contentChange {
+                    .move-Icon {
+                        p {
+                            font-size: 10.394rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

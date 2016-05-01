@@ -1,1 +1,71 @@
 // extend setting
+@import 'mixin';
+$dotcolor: inherit,
+#2B1F31,
+#413D65,
+#5998b2,
+#5FB9B0;
+//load style
+.paceBox {
+    background-color: white;
+    position: fixed;
+    z-index: 9999999;
+    @include fullWH;
+    top: 0;
+    left: 0;
+    .loader {
+        position: absolute;
+        @include fullWH;
+        perspective: 100px;
+        transform-type: preserve-3d;
+        animation: loader 6s cubic-bezier(0, 0, 1, 1) infinite;
+        .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+            width: 20px;
+            height: 20px;
+            margin-top: -90px;
+            margin-left: -10px;
+            border-radius: 10px;
+            background-color: #1e3f57;
+            transform-type: preserve-3d;
+            transform-origin: 50% 90px;
+            transform: rotateZ(30deg);
+            animation: dot-1 1.5s cubic-bezier(.6, 0, .4, 1) infinite;
+        }
+        @for $i from 2 through 5 {
+            .dot:nth-child(#{$i}) {
+                transform: rotateZ(30deg - (15deg * ($i - 1)));
+                animation-name: dot-#{$i};
+                animation-delay: (150ms * ($i - 1));
+                background-color: nth($dotcolor, $i);
+            }
+        }
+    }
+}
+
+
+/* animation */
+
+@keyframes loader {
+    0% {
+        transform: rotateX(30deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(30deg) rotateZ(-360deg);
+    }
+}
+
+@for $i from 1 through 5 {
+    @keyframes dot-#{$i} {
+        0% {
+            transform: rotateZ(45deg - ($i*15deg)) rotateX(10deg);
+        }
+        95%,
+        100% {
+            transform: rotateZ(405deg - ($i*15deg)) rotateX(10deg);
+        }
+    }
+}

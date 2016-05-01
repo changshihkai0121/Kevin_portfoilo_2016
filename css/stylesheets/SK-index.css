@@ -129,6 +129,7 @@ p {
 #header .mobile-menu img {
   margin-right: 20px;
   width: 25px;
+  cursor: pointer;
 }
 #header .mobile-menu .menu-container {
   display: none;
@@ -139,8 +140,35 @@ p {
   left: 0px;
   background-color: #2b1e31;
 }
+#header .mobile-menu .menu-container ul {
+  margin-top: 20px;
+}
+#header .mobile-menu .menu-container ul .closeMenu-Btn {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+#header .mobile-menu .menu-container ul .menu-list {
+  margin: 18% 0;
+}
+#header .mobile-menu .menu-container ul li {
+  text-align: center;
+}
+#header .mobile-menu .menu-container ul li a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+#header .mobile-menu .menu-logo {
+  text-align: center;
+}
+#header .mobile-menu .menu-logo .mobile-porfoiloLogo {
+  margin: 0 auto;
+}
 
 .copyright {
+  z-index: 9999;
   position: fixed;
   bottom: 35px;
   color: white;
@@ -149,6 +177,118 @@ p {
   text-align: center;
 }
 
+.paceBox {
+  background-color: white;
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.paceBox .loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 100px;
+  transform-type: preserve-3d;
+  animation: loader 6s cubic-bezier(0, 0, 1, 1) infinite;
+}
+.paceBox .loader .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  margin-top: -90px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: #1e3f57;
+  transform-type: preserve-3d;
+  transform-origin: 50% 90px;
+  transform: rotateZ(30deg);
+  animation: dot-1 1.5s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+.paceBox .loader .dot:nth-child(2) {
+  transform: rotateZ(15deg);
+  animation-name: dot-2;
+  animation-delay: 150ms;
+  background-color: #2B1F31;
+}
+.paceBox .loader .dot:nth-child(3) {
+  transform: rotateZ(0deg);
+  animation-name: dot-3;
+  animation-delay: 300ms;
+  background-color: #413D65;
+}
+.paceBox .loader .dot:nth-child(4) {
+  transform: rotateZ(-15deg);
+  animation-name: dot-4;
+  animation-delay: 450ms;
+  background-color: #5998b2;
+}
+.paceBox .loader .dot:nth-child(5) {
+  transform: rotateZ(-30deg);
+  animation-name: dot-5;
+  animation-delay: 600ms;
+  background-color: #5FB9B0;
+}
+
+/* animation */
+@keyframes loader {
+  0% {
+    transform: rotateX(30deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(30deg) rotateZ(-360deg);
+  }
+}
+@keyframes dot-1 {
+  0% {
+    transform: rotateZ(30deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(390deg) rotateX(10deg);
+  }
+}
+@keyframes dot-2 {
+  0% {
+    transform: rotateZ(15deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(375deg) rotateX(10deg);
+  }
+}
+@keyframes dot-3 {
+  0% {
+    transform: rotateZ(0deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(360deg) rotateX(10deg);
+  }
+}
+@keyframes dot-4 {
+  0% {
+    transform: rotateZ(-15deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(345deg) rotateX(10deg);
+  }
+}
+@keyframes dot-5 {
+  0% {
+    transform: rotateZ(-30deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(330deg) rotateX(10deg);
+  }
+}
 .container {
   width: 100%;
   height: 100%;
@@ -313,8 +453,10 @@ p {
   .container .content .countent-Time .contentChange {
     display: block;
     position: absolute;
-    margin: 0 12%;
-    width: 76%;
+    margin: 0 16%;
+    width: 68%;
+    text-align: center;
+    z-index: 996;
   }
   .container .content .countent-Time .contentChange .move-Icon {
     display: inline-block;
@@ -329,13 +471,15 @@ p {
     width: 60%;
     height: 100%;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 12rem;
+    font-size: 8.3rem;
   }
   .container .content .countent-Time .contentBox {
     display: block;
-    width: 50%;
+    width: 100%;
     height: 100%;
     float: left;
+    position: relative;
+    left: 0;
   }
   .container .content .countent-Time .contentBox .contentBox {
     position: absolute;
@@ -355,67 +499,96 @@ p {
     right: 0px;
     width: 197%;
   }
-  .container .content .countent-Time #content-Before {
-    width: 50%;
-    height: 100%;
-    float: right;
-    background-color: #413D65;
-  }
-  .container .content .countent-Time #content-Before .fontTime {
-    margin-top: 50%;
-    text-align: right;
-  }
-  .container .content .countent-Time #content-Before .fontTime p {
-    padding-right: 24%;
-    color: white;
-    font-size: 2rem;
-    float: right;
-    opacity: 0;
-    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-  }
-  .container .content .countent-Time #content-Before .fontTime p span {
-    color: white;
-    font-size: 2.8rem;
-    float: right;
-    opacity: 0;
-    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-weight: 700;
-  }
   .container .content .countent-Time #content-After {
     width: 50%;
     height: 100%;
+    float: left;
     background-color: #5FB9B0;
+    position: absolute;
+    left: 0;
+    z-index: 99;
   }
   .container .content .countent-Time #content-After .fontTime {
-    margin-top: 50%;
+    margin-top: 14%;
     text-align: left;
   }
   .container .content .countent-Time #content-After .fontTime p {
-    padding-left: 24%;
+    padding-left: 6%;
     color: white;
     font-size: 2rem;
     float: left;
-    opacity: 0;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
     font-weight: 400;
+    opacity: 0;
   }
   .container .content .countent-Time #content-After .fontTime p span {
     color: white;
     font-size: 2.8rem;
     float: right;
-    opacity: 0;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-weight: 700;
   }
+  .container .content .countent-Time #content-Before {
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color: #413D65;
+    position: absolute;
+    right: 0;
+    left: inherit;
+  }
+  .container .content .countent-Time #content-Before .fontTime {
+    margin-top: 14%;
+    text-align: right;
+  }
+  .container .content .countent-Time #content-Before .fontTime p {
+    padding-right: 6%;
+    color: white;
+    font-size: 2rem;
+    float: right;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    opacity: 0;
+  }
+  .container .content .countent-Time #content-Before .fontTime p span {
+    color: white;
+    font-size: 2.8rem;
+    float: right;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 700;
+  }
+  .container .content #touchBox {
+    width: 96%;
+    height: 98%;
+    position: absolute;
+    z-index: 998;
+    cursor: pointer;
+  }
+  .container .content #touchBox .touch-left {
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  }
+  .container .content #touchBox .touch-right {
+    right: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  }
 
   .copyright p {
     font-size: 0.9375rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container .content .countent-Time .contentChange .move-Icon p {
+    font-size: 10.394rem;
   }
 }
