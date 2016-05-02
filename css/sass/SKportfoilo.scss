@@ -1,6 +1,6 @@
 /**
 =============================================================================
- portfoilo of Shih-Kai of common style
+ portfoilo of Shih-Kai common style clump
 =============================================================================
 **/
 
@@ -12,18 +12,3 @@
 @import 'modle'; // setting button table ... style
 @import 'extend'; // setting all extend
 @import 'websiteSetting';
-
-
-//font setting
-// 
-// #container {
-//     @include border-radius(10px);
-//     width: 100%;
-//     margin: 30px 30px;
-//     .container-before { /* right box */
-//         @include container-Box(right);
-//     }
-//     .container-after { /* left box */
-//     	@include container-Box;
-//     }
-// }

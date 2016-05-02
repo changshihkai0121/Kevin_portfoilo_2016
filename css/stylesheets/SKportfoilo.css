@@ -1,6 +1,6 @@
 /**
 =============================================================================
- portfoilo of Shih-Kai of common style
+ portfoilo of Shih-Kai common style clump
 =============================================================================
 **/
 html, body, div, span, applet, object, iframe,
@@ -134,6 +134,7 @@ p {
   top: 0px;
   left: 0px;
   background-color: #2b1e31;
+  overflow: auto;
 }
 #header .mobile-menu .menu-container ul {
   margin-top: 20px;

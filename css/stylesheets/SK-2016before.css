@@ -1,0 +1,142 @@
+/**
+=============================================================================
+ portfoilo of Shih-Kai in 2016 Before style
+=============================================================================
+**/
+/**
+=======================================
+    --setting using font style--
+    zh-tw => Kozuka Mincho Pro B, Kozuka Mincho Pro EL
+    en => TrajanPro-Bold, TrajanPro-Regular 
+=======================================
+**/
+.paceBox {
+  background-color: white;
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.paceBox .loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 100px;
+  transform-type: preserve-3d;
+  animation: loader 6s cubic-bezier(0, 0, 1, 1) infinite;
+}
+.paceBox .loader .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  margin-top: -90px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: #1e3f57;
+  transform-type: preserve-3d;
+  transform-origin: 50% 90px;
+  transform: rotateZ(30deg);
+  animation: dot-1 1.5s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+.paceBox .loader .dot:nth-child(2) {
+  transform: rotateZ(15deg);
+  animation-name: dot-2;
+  animation-delay: 150ms;
+  background-color: #2B1F31;
+}
+.paceBox .loader .dot:nth-child(3) {
+  transform: rotateZ(0deg);
+  animation-name: dot-3;
+  animation-delay: 300ms;
+  background-color: #413D65;
+}
+.paceBox .loader .dot:nth-child(4) {
+  transform: rotateZ(-15deg);
+  animation-name: dot-4;
+  animation-delay: 450ms;
+  background-color: #5998b2;
+}
+.paceBox .loader .dot:nth-child(5) {
+  transform: rotateZ(-30deg);
+  animation-name: dot-5;
+  animation-delay: 600ms;
+  background-color: #5FB9B0;
+}
+
+/* animation */
+@keyframes loader {
+  0% {
+    transform: rotateX(30deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(30deg) rotateZ(-360deg);
+  }
+}
+@keyframes dot-1 {
+  0% {
+    transform: rotateZ(30deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(390deg) rotateX(10deg);
+  }
+}
+@keyframes dot-2 {
+  0% {
+    transform: rotateZ(15deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(375deg) rotateX(10deg);
+  }
+}
+@keyframes dot-3 {
+  0% {
+    transform: rotateZ(0deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(360deg) rotateX(10deg);
+  }
+}
+@keyframes dot-4 {
+  0% {
+    transform: rotateZ(-15deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(345deg) rotateX(10deg);
+  }
+}
+@keyframes dot-5 {
+  0% {
+    transform: rotateZ(-30deg) rotateX(10deg);
+  }
+  95%,
+        100% {
+    transform: rotateZ(330deg) rotateX(10deg);
+  }
+}
+@media (min-width: 0px) {
+  .container .content .beforeContent_All {
+    width: 100%;
+    height: 100%;
+    background-color: #3f3c63;
+  }
+}
+@media (min-width: 1024px) {
+  .container .content {
+    height: 92%;
+    padding: 2% 2% 2% 2%;
+  }
+  .container .content .beforeContent_All {
+    width: 100%;
+    height: 100%;
+    background-color: #3f3c63;
+  }
+}

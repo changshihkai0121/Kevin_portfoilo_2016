@@ -1,0 +1,39 @@
+/**
+=============================================================================
+ portfoilo of Shih-Kai in 2016 Before style
+=============================================================================
+**/
+
+@import 'compass';
+@import 'variable'; // all varialbe
+@import 'mixin'; // setting all mixin style
+@import 'modle'; // setting button table ... style
+@import 'extend'; // setting all extend
+@import 'websiteSetting';
+@include _break("mobile") {
+    .container {
+        .content {
+        	.beforeContent_All {
+        		@include fullWH;
+                background-color: rgba(63, 60, 99, 1);
+        	}
+        }
+    }
+}
+
+@include _break("pad") {}
+
+@include _break("padHor") {
+    .container {
+        .content {
+            height: 92%;
+            padding: 2% 2% 2% 2%;
+            .beforeContent_All {
+                @include fullWH;
+                background-color: rgba(63, 60, 99, 1);
+            }
+        }
+    }
+}
+
+@include _break("desktop") {}

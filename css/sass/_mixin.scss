@@ -7,17 +7,6 @@
     float: $float;
 }
 
-// @mixin container-move($containerWidth, $site) {
-//     width: $containerWidth;
-//     height: 100%;
-//     @if $site==right {
-//         right: 0px;
-//     }
-//     @else if $site==left {
-//         left: 0px;
-//     }
-// }
-
 @mixin boxSite($text-align:center) {
     width: 100%;
     display: block;
@@ -101,7 +90,7 @@
 @mixin basic_Btnsetting {
     @include border_radius(12px);
     display: inline-block;
-    background-color: #bbb;
+    background-color: #2A2A2A;
 }
 
 @mixin liner-color($color1, $color2, $color3, $color4) {

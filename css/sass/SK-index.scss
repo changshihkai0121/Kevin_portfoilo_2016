@@ -1,12 +1,20 @@
 /**
 =============================================================================
- portfoilo of Shih-Kai of Index style
+ portfoilo of Shih-Kai in Index style
 =============================================================================
 **/
 
 @import 'SKportfoilo';
 .container {
     @include fullWH;
+}
+
+.maskAllpage {
+    position: fixed;
+    @include fullWH;
+    z-index: 999999;
+    top: 0;
+    left: 0;
 }
 
 @include _break("mobile") {
@@ -19,7 +27,8 @@
                     display: none;
                 }
                 #content-After {
-                    background-color: #5FB9B0;
+                    // background-color: rgba(95,178,169,1);
+                    background-color: rgba(50, 96, 81, 1);
                     width: 100%;
                     height: 50%;
                     display: block;
@@ -27,7 +36,8 @@
                 #content-Before {
                     width: 100%;
                     height: 50%;
-                    background-color: #413D65;
+                    // background-color: rgba(63,60,99,1);
+                    background-color: rgba(18, 24, 39, 1);
                     display: block;
                 }
                 .contentBox {
@@ -74,8 +84,8 @@
                     right: 1px;
                     bottom: 1px;
                     left: 1px;
-                    @include liner_color(#eee, #ddd, #eee, #eee);
-                    @include showdow_setting(0, 2px, 3px, 0px, -38px, 10px, -5px, 0px, -40px, 1px, 0px, 5px, 2px, rgba(0, 0, 0, 0.4), #888, #bbb, white);
+                    @include liner_color(#888, #434343, #585858, #212121);
+                    @include showdow_setting(0, 2px, 3px, 0px, -38px, 10px, -5px, 0px, -40px, 1px, 0px, 5px, 2px, rgba(0, 0, 0, 0.4), #131313, #2C2C2C, #B1B1B1);
                     // @include showdow_setting(0,2px,3px,0px,-1px,1px,0px,0px,-40px,1px,0px,-6px,0px,rgba(0, 0, 0, 0.4),#888,#bbb,white);
                     // @include showdow_setting (2px, 3px, -1px, 1px, 0, -40px, 1px, -6px, 0, #888, #bbb);
                     @include border_radius(12px);
@@ -104,6 +114,9 @@
                         font-size: 2rem;
                     }
                 }
+            }
+            .touchBox {
+                display: none;
             }
         }
     }
@@ -175,24 +188,14 @@
                     .contentBox {
                         position: absolute;
                         overflow: hidden;
-                        .face-left {
-                            @include face-default;
-                            width: 203%;
-                            left: 0px;
-                        }
-                        .face-right {
-                            @include face-default;
-                            right: 0px;
-                            width: 197%;
-                        }
                     }
                 }
                 #content-After {
                     @include container-Box(left);
-                    background-color: #5FB9B0;
+                    background-color: rgba(95, 178, 169, 1);
                     position: absolute;
                     left: 0;
-                    z-index: 99;
+                    z-index: 90;
                     .fontTime {
                         margin-top: 14%;
                         text-align: left;
@@ -206,6 +209,14 @@
                             }
                         }
                     }
+                    .face-left {
+                        @include face-default;
+                        left: 0px;
+                        img {
+                            position: relative;
+                            left: 1%;
+                        }
+                    }
                 }
                 #content-Before {
                     @include container-Box(right);
@@ -213,6 +224,7 @@
                     position: absolute;
                     right: 0;
                     left: inherit;
+                    z-index: 90;
                     .fontTime {
                         margin-top: 14%;
                         text-align: right;
@@ -226,6 +238,14 @@
                             }
                         }
                     }
+                    .face-right {
+                        @include face-default;
+                        right: 0px;
+                        img {
+                            position: relative;
+                            left: 1%;
+                        }
+                    }
                 }
             }
             #touchBox {
@@ -233,7 +253,8 @@
                 height: 98%;
                 position: absolute;
                 z-index: 998;
-                cursor: pointer;
+                display: block;
+                cursor: auto;
                 .touch-left {
                     left: 0;
                     position: absolute;
@@ -247,7 +268,6 @@
                     height: 100%;
                 }
             }
-            
         }
     }
     .copyright {

@@ -4,12 +4,13 @@
 =============================================================================
 **/
 
-var _windowWidth, _windowHeight;
+var _windowWidth, _windowHeight, _countentTimeWidth;
 
 // count size
 function objectSize() {
     _windowWidth = $(window).width();
     _windowHeight = $(window).height();
+    _countentTimeWidth = $('.countent-Time').width();
 }
 
 //Checking for Retina Devices
@@ -41,10 +42,25 @@ function isDevices() {
     }
 }
 
+function changePage(changePage) {
+    setTimeout(function() {
+        $('body').fadeOut(2500);
+        setTimeout(function() { window.location.href = changePage }, 1500);
+    }, 1000);
+}
 
 /* Jquery auto run function began */
 $(function() {
     objectSize(); // include object size
+    var $touchRight = $('.touch-right'),
+        $touchLeft = $('.touch-left'),
+        $beforeBox = $('#content-Before'),
+        $afterBox = $('#content-After'),
+        $touchAll = $('#touchBox');
+    var nextToken = 1,
+        waitingAtBorder = 0, // 0: not waiting
+        timeFrame = 500; // milliseconds
+
     $('body').append('<div id=' + '\"paceDiv\"' + '></div><div class=' + '\"paceBox\"' + '><div class=' + '\"loader\"' + '><div class=' + '\"dot\"' + '></div><div class=' + '\"dot\"' + '></div><div class=' + '\"dot\"' + '></div> <div class=' + '\"dot\"' + '></div><div class=' + '\"dot\"' + '></div></div>');
     //append loading site
     paceOptions = {
@@ -67,51 +83,92 @@ $(function() {
             $(this).attr('src', $(this).attr('src').replace('.png', '.svg'));
         });
     } else {};
+    $('.face-left').css('width', _countentTimeWidth);
+    $('.face-right').css('width', _countentTimeWidth);
     //mouse enter Box action --  jquery Mouseenter
-    $('.touch-right').click(function() {
-        var $beforeBox = $('#content-Before');
-        touchBoxWidth = $('#touchBox').width();
-        rightBox_Width = $(this).width();
-        percentWidth = rightBox_Width / touchBoxWidth;
-        if (percentWidth <= 0.9) {
-            $beforeBox.css('z-index', '990');
-            $beforeBox.animate({ 'width': '100%' });
-            $(this).css('width', '100%');
-            $('.touch-left').css('width', 0);
-            $('.face-right').css({ 'width': '100%' });
-            $('.move-Icon p').animate({ 'width': '100%' });
-            $beforeBox.find('.fontTime p').delay(800).animate({ 'opacity': 1 });
-        } else {
-            $beforeBox.animate({ 'width': '50%' });
-            $(this).css('width', '50%');
-            $('.touch-left').css('width', '50%');
-            $('.face-right').css({ 'width': '197%' });
-            $('.move-Icon p').animate({ 'width': '60%' });
-            $beforeBox.find('.fontTime p').animate({ 'opacity': 0 });
+    $touchRight.mouseenter(function() {
+        if (!waitingAtBorder) {
+            var token = nextToken++;
+            waitingAtBorder = token;
+            setTimeout(function() {
+                if (waitingAtBorder == token) {
+                    touchBoxWidth = $('#touchBox').width();
+                    $beforeBox.stop().css('z-index', 99);
+                    $beforeBox.stop().animate({ 'width': '100%' }, 1000);
+                    $(this).stop().css('width', '100%');
+                    $touchLeft.stop().css('width', 0);
+                    $('.move-Icon p').stop().animate({ 'width': '100%' });
+                    $beforeBox.find('.fontTime p').stop().animate({ 'opacity': 1 });
+                    $touchAll.css('cursor', 'pointer');
+                }
+            }, timeFrame);
         }
     });
-    $('.touch-left').click(function() {
-        var $beforeBox = $('#content-After');
-        touchBoxWidth = $('#touchBox').width();
-        rightBox_Width = $(this).width();
-        percentWidth = rightBox_Width / touchBoxWidth;
-        if (percentWidth <= 0.9) {
-            $beforeBox.css('z-index', '991');
-            $beforeBox.animate({ 'width': '100%' });
-            $(this).css('width', '100%');
-            $('.touch-right').css('width', 0);
-            $('.face-left').css({ 'width': '100%' });
-            $('.move-Icon p').animate({ 'width': '100%' });
-            $beforeBox.find('.fontTime p').delay(800).animate({ 'opacity': 1 });
-        } else {
-            $beforeBox.css('z-index', '990');
-            $beforeBox.animate({ 'width': '50%' });
-            $(this).css('width', '50%');
-            $('.touch-right').css('width', '50%');
-            $('.face-left').css({ 'width': '203%' });
-            $('.move-Icon p').animate({ 'width': '60%' });
-            $beforeBox.find('.fontTime p').animate({ 'opacity': 0 });
+    $touchRight.mouseleave(function() {
+        if (waitingAtBorder) {
+            waitingAtBorder = 0;
+            setTimeout(function() {
+                if (waitingAtBorder == 0) {
+                    touchBoxWidth = $('#touchBox').width();
+                    $beforeBox.stop().css('z-index', 90);
+                    $beforeBox.stop().animate({ 'width': '50%' }, 1000);
+                    $(this).stop().css('width', '50%');
+                    $touchLeft.stop().css('width', '50%');
+                    $('.move-Icon p').stop().animate({ 'width': '60%' });
+                    $beforeBox.find('.fontTime p').stop().animate({ 'opacity': 0 });
+                    $touchAll.css('cursor', 'auto');
+                    return;
+                }
+            }, timeFrame);
         }
+    });
+    $touchLeft.mouseenter(function() {
+        if (!waitingAtBorder) {
+            var token = nextToken++;
+            waitingAtBorder = token;
+            setTimeout(function() {
+                touchBoxWidth = $('#touchBox').width();
+                $afterBox.stop().css('z-index', 99);
+                $afterBox.stop().animate({ 'width': '100%' }, 1000);
+                $(this).stop().css('width', '100%');
+                $touchRight.stop().css('width', 0);
+                $('.move-Icon p').stop().animate({ 'width': '100%' });
+                $afterBox.find('.fontTime p').stop().animate({ 'opacity': 1 });
+                $touchAll.css('cursor', 'pointer');
+            }, timeFrame);
+        }
+    });
+    $touchLeft.mouseleave(function() {
+        if (waitingAtBorder) {
+            waitingAtBorder = 0;
+            setTimeout(function() {
+                if (waitingAtBorder == 0) {
+                    touchBoxWidth = $('#touchBox').width();
+                    $afterBox.stop().animate({ 'width': '50%' }, 1000, function() {
+                        $(this).stop().css('z-index', 90);
+                    });
+                    $(this).stop().css('width', '50%');
+                    $touchRight.stop().css('width', '50%');
+                    $('.move-Icon p').stop().animate({ 'width': '60%' });
+                    $afterBox.find('.fontTime p').stop().animate({ 'opacity': 0 });
+                    $touchAll.css('cursor', 'auto');
+                }
+                return;
+            }, timeFrame);
+        }
+    });
+    $('.toogle-Btn').click(function() {
+        $afterBox.css('background-color', 'rgba(95,178,169,1)');
+        $beforeBox.css('background-color', ' rgba(63,60,99,1)');
+        $(this).css('background-color', '#bbb');
+        $('body').append('<div class=' + '\"maskAllpage\"' + '></div>')
+        changePage('/about.html');
+    });
+    $touchRight.click(function() {
+        changePage('/2016before.html');
+    });
+    $touchLeft.click(function() {
+        changePage('/2016after.html');
     });
     //menu btn click animation
     $('.menu-btn').click(function() {
@@ -128,6 +185,8 @@ $(function() {
 /* window resize action began */
 $(window).resize(function() {
     objectSize(); // include object size
+    $('.face-left').css('width', _countentTimeWidth);
+    $('.face-right').css('width', _countentTimeWidth);
 });
 /* window resize action end */
 
