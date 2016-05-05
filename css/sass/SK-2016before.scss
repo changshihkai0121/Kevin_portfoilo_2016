@@ -13,10 +13,40 @@
 @include _break("mobile") {
     .container {
         .content {
-        	.beforeContent_All {
-        		@include fullWH;
+            .beforeContent_All {
+                @include fullWH;
                 background-color: rgba(63, 60, 99, 1);
-        	}
+                .content-listInfomation {
+                    width: 100%;
+                    height: auto;
+                    padding-top: 86px;
+                    text-align: right;
+                    .selectStyle {
+                        margin-right: 20px;
+                        color: white;
+                        background-color: transparent;
+                        padding: 3px 10px;
+                        margin-bottom: 10px;
+                        line-height: 17px;
+                        @include border_setting(1px, 0px, 1px, 0px, solid, white);
+                        @include fontsFamily_basicSetting(400);
+                        &:focus {
+                            outline-color: rgba(255, 255, 255, .1);
+                        }
+                    }
+                    .contentBlock {
+                        width: 90%;
+                        height: 320px;
+                        margin: 0 auto;
+                    }
+                    .choose-slideshow-page {
+                        text-align: center;
+                        .slideshow-change {
+                            height: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
