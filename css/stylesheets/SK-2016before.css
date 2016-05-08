@@ -139,6 +139,7 @@
     color: white;
     background-color: transparent;
     padding: 3px 10px;
+    padding-right: 50px;
     margin-bottom: 10px;
     line-height: 17px;
     border-top: 1px solid white;
@@ -148,9 +149,18 @@
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
     font-weight: 400;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("/images/next_s.png");
+    background-repeat: no-repeat;
+    background-position: right;
   }
   .container .content .beforeContent_All .content-listInfomation .selectStyle:focus {
     outline-color: rgba(255, 255, 255, 0.1);
+  }
+  .container .content .beforeContent_All .content-listInfomation .selectStyle option {
+    color: #3f3c63;
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock {
     width: 90%;
@@ -158,10 +168,21 @@
     margin: 0 auto;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
+    margin: 5.335% auto;
     text-align: center;
+    height: 55px;
+    line-height: 55px;
   }
-  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshow-change {
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowborder {
+    border-right: 1px solid white;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent {
+    width: 45%;
+    display: inline-block;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent .slideshow-change {
     height: 20px;
+    cursor: pointer;
   }
 }
 @media (min-width: 1024px) {

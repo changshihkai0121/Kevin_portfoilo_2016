@@ -107,9 +107,21 @@
     box-shadow: $s1 $s2 $s3 $color1, inset $s4 $s5 $s6 $s7 $color2, inset $s8 $s9 $a $color3, inset $b $c $d $color4;
 }
 
-@mixin border_setting($size0,$size1,$size2,$size3,$style,$color){
-    border-top:$size0 $style $color;
-    border-right:$size1 $style $color;
-    border-bottom:$size2 $style $color;
-    border-left:$size3 $style $color;
+@mixin border_setting($size0, $size1, $size2, $size3, $style, $color) {
+    border-top: $size0 $style $color;
+    border-right: $size1 $style $color;
+    border-bottom: $size2 $style $color;
+    border-left: $size3 $style $color;
+}
+
+@mixin appearance-none($value) {
+    -webkit-appearance: $value;
+    -moz-appearance: $value;
+    appearance: $value;
+}
+
+@mixin select-backgroundImage($url,$repeat,$position){
+    background-image: url($url);
+    background-repeat: $repeat;
+    background-position: $position;
 }

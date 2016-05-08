@@ -78,11 +78,12 @@ $(function() {
             $('#paceDiv').remove();
         }, 3000);
     });
+    
     if (isRetina()) {
         $('.images-icon').each(function() { // all class-name: images-icon change retina use pic
             $(this).attr('src', $(this).attr('src').replace('.png', '.svg'));
         });
-    } else {};
+    }
     $('.face-left').css('width', _countentTimeWidth);
     $('.face-right').css('width', _countentTimeWidth);
     //mouse enter Box action --  jquery Mouseenter

@@ -26,12 +26,18 @@
                         color: white;
                         background-color: transparent;
                         padding: 3px 10px;
+                        padding-right: 50px;
                         margin-bottom: 10px;
                         line-height: 17px;
                         @include border_setting(1px, 0px, 1px, 0px, solid, white);
                         @include fontsFamily_basicSetting(400);
+                        @include appearance-none(none);
+                        @include select-backgroundImage("/images/next_s.png", no-repeat, right);
                         &:focus {
                             outline-color: rgba(255, 255, 255, .1);
+                        }
+                        option {
+                            color: rgba(63, 60, 99, 1);
                         }
                     }
                     .contentBlock {
@@ -40,9 +46,20 @@
                         margin: 0 auto;
                     }
                     .choose-slideshow-page {
+                        margin: 5.335% auto;
                         text-align: center;
-                        .slideshow-change {
-                            height: 20px;
+                        height: 55px;
+                        line-height: 55px;
+                        .slideshowborder {
+                            border-right: 1px solid white;
+                        }
+                        .slideshowcontent {
+                            width: 45%;
+                            display: inline-block;
+                            .slideshow-change {
+                                height: 20px;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
