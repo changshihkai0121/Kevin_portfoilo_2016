@@ -27,7 +27,7 @@
                         background-color: transparent;
                         padding: 3px 10px;
                         padding-right: 50px;
-                        margin-bottom: 10px;
+                        margin-bottom: 15px;
                         line-height: 17px;
                         @include border_setting(1px, 0px, 1px, 0px, solid, white);
                         @include fontsFamily_basicSetting(400);
@@ -42,11 +42,17 @@
                     }
                     .contentBlock {
                         width: 90%;
-                        height: 320px;
+                        height: 270px;
                         margin: 0 auto;
+                        overflow: hidden;
+                        .slideshow_onecontent {
+                            img {
+                                width: 100%;
+                            }
+                        }
                     }
                     .choose-slideshow-page {
-                        margin: 5.335% auto;
+                        margin: 10% auto;
                         text-align: center;
                         height: 55px;
                         line-height: 55px;
@@ -54,6 +60,7 @@
                             border-right: 1px solid white;
                         }
                         .slideshowcontent {
+                        	cursor: pointer;
                             width: 45%;
                             display: inline-block;
                             .slideshow-change {

@@ -140,7 +140,7 @@
     background-color: transparent;
     padding: 3px 10px;
     padding-right: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     line-height: 17px;
     border-top: 1px solid white;
     border-right: 0px solid white;
@@ -164,11 +164,15 @@
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock {
     width: 90%;
-    height: 320px;
+    height: 270px;
     margin: 0 auto;
+    overflow: hidden;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshow_onecontent img {
+    width: 100%;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
-    margin: 5.335% auto;
+    margin: 10% auto;
     text-align: center;
     height: 55px;
     line-height: 55px;
@@ -177,6 +181,7 @@
     border-right: 1px solid white;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent {
+    cursor: pointer;
     width: 45%;
     display: inline-block;
   }
