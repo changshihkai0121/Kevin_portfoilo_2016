@@ -18,7 +18,7 @@
                 background-color: rgba(63, 60, 99, 1);
                 .content-listInfomation {
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                     padding-top: 86px;
                     text-align: right;
                     .selectStyle {
@@ -42,10 +42,13 @@
                     }
                     .contentBlock {
                         width: 90%;
-                        height: 270px;
+                        height: 47.53556%;
                         margin: 0 auto;
                         overflow: hidden;
-                        .slideshow_onecontent {
+                        .slideshowInfo{
+                        	position: relative;
+                        }
+                        .slideshow-onecontent {
                             img {
                                 width: 100%;
                             }
