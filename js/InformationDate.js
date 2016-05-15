@@ -31,13 +31,13 @@ var beforeData = [
 {
 	'project_id':'p01',
 	'cat_id':'i01',
-	'project_title':'卡厝味 － 產品介紹',
+	'project_title':'卡厝味_產品介紹',
 	'project_mainPic':'/images/i01@1x.jpg'
 },
 {
 	'project_id':'p02',
 	'cat_id':'i01',
-	'project_title':'卡厝味 － App介紹',
+	'project_title':'卡厝味_App介紹',
 	'project_mainPic':'/images/i01@1x.jpg'
 },
 {

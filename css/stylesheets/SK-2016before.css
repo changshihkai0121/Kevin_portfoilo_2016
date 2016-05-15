@@ -128,6 +128,12 @@
     height: 100%;
     background-color: #3f3c63;
   }
+  .container .content .beforeContent_All .beforeTitle-PC {
+    display: none;
+  }
+  .container .content .beforeContent_All .choose-cat-PC {
+    display: none;
+  }
   .container .content .beforeContent_All .content-listInfomation {
     width: 100%;
     height: 100%;
@@ -164,7 +170,6 @@
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock {
     width: 90%;
-    height: 47.53556%;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -177,8 +182,7 @@
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
     margin: 10% auto;
     text-align: center;
-    height: 55px;
-    line-height: 55px;
+    height: 8.235%;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowborder {
     border-right: 1px solid white;
@@ -195,12 +199,79 @@
 }
 @media (min-width: 1024px) {
   .container .content {
-    height: 92%;
+    height: 93%;
     padding: 2% 2% 2% 2%;
   }
   .container .content .beforeContent_All {
     width: 100%;
     height: 100%;
     background-color: #3f3c63;
+  }
+  .container .content .beforeContent_All .beforeTitle-PC {
+    width: 100%;
+    right: 5%;
+    top: 113px;
+    display: block;
+    text-align: right;
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .container .content .beforeContent_All .selectStyle {
+    display: none;
+  }
+  .container .content .beforeContent_All .content-listInfomation {
+    padding-top: 6.487%;
+    height: 88%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock {
+    width: auto;
+    height: 76.371%;
+    margin: 55px 4.5%;
+    margin-right: 15%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo {
+    float: left;
+    width: 200%;
+    height: 100%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block {
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    float: left;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent {
+    width: 14%;
+    overflow: hidden;
+    margin-right: 20px;
+    float: left;
+    display: inline-block;
+    height: 100%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent img {
+    height: 100%;
+    width: auto;
+  }
+  .container .content .beforeContent_All .choose-cat-PC {
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    margin: 4% 0;
+  }
+  .container .content .beforeContent_All .choose-cat-PC .before-listBtn {
+    padding: 15% 0;
+    color: white;
+    cursor: pointer;
+  }
+  .container .content .beforeContent_All .choose-cat-PC .before-listBtn:hover {
+    color: #ececec;
+  }
+  .container .content .beforeContent_All .choose-cat-PC .before-listBtn:active {
+    color: #ececec;
   }
 }

@@ -120,8 +120,24 @@
     appearance: $value;
 }
 
-@mixin select-backgroundImage($url,$repeat,$position){
+@mixin select-backgroundImage($url, $repeat, $position) {
     background-image: url($url);
     background-repeat: $repeat;
     background-position: $position;
+}
+
+@mixin inline_flex {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+@mixin before_Title {
+    display: block;
+    text-align: right;
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    @include fontsFamily_basicSetting(700);
 }

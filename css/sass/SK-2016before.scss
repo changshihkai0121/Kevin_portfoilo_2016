@@ -14,6 +14,12 @@
     .container {
         .content {
             .beforeContent_All {
+                .beforeTitle-PC {
+                    display: none;
+                }
+                .choose-cat-PC {
+                    display: none;
+                }
                 @include fullWH;
                 background-color: rgba(63, 60, 99, 1);
                 .content-listInfomation {
@@ -42,11 +48,10 @@
                     }
                     .contentBlock {
                         width: 90%;
-                        height: 47.53556%;
                         margin: 0 auto;
                         overflow: hidden;
-                        .slideshowInfo{
-                        	position: relative;
+                        .slideshowInfo {
+                            position: relative;
                         }
                         .slideshow-onecontent {
                             img {
@@ -57,13 +62,12 @@
                     .choose-slideshow-page {
                         margin: 10% auto;
                         text-align: center;
-                        height: 55px;
-                        line-height: 55px;
+                        height: 8.235%;
                         .slideshowborder {
                             border-right: 1px solid white;
                         }
                         .slideshowcontent {
-                        	cursor: pointer;
+                            cursor: pointer;
                             width: 45%;
                             display: inline-block;
                             .slideshow-change {
@@ -83,11 +87,73 @@
 @include _break("padHor") {
     .container {
         .content {
-            height: 92%;
+            height: 93%;
             padding: 2% 2% 2% 2%;
             .beforeContent_All {
                 @include fullWH;
                 background-color: rgba(63, 60, 99, 1);
+                .beforeTitle-PC {
+                    width: 100%;
+                    right: 5%;
+                    top: 113px;
+                    @include before_Title;
+                }
+                .selectStyle {
+                    display: none;
+                }
+                .content-listInfomation {
+                    padding-top: 6.487%;
+                    height: 88%;
+                    .contentBlock {
+                        width: auto;
+                        height: 76.371%;
+                        margin: 55px 4.5%;
+                        margin-right: 15%;
+                        .slideshowInfo {
+                            float: left;
+                            width: 200%;
+                            height: 100%;
+                            .slideShow-Block{
+                                width: 50%;
+                                display: inline-block;
+                                height: 100%;
+                                float: left;
+                                .slideshow-onecontent{
+                                    width: 14%;
+                                    overflow: hidden;
+                                    margin-right: 20px;
+                                    float:left;
+                                    display: inline-block;
+                                    height: 100%;
+                                    img{
+                                        height: 100%;
+                                        width: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .choose-cat-PC {
+                    display: inline-block;
+                    position: absolute;
+                    right: 5%;
+                    margin: 4% 0;
+                    .before-listBtn {
+                        padding: 15% 0;
+                        color: white;
+                        cursor: pointer;
+                        &:hover {
+                            color: #ececec;
+                        }
+                        &:active {
+                            color: #ececec;
+                        }
+                    }
+                }
+                .choose-slideshow-page{
+
+                }
             }
         }
     }
