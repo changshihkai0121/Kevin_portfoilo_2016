@@ -1,0 +1,105 @@
+/*
+Error: File to import not found or unreadable: breakpoint.
+       Load paths:
+         C:/Users/kevin/Dropbox/Public/2016_Portfolio_shihKai/css/sass
+         C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/bourbon-4.2.6/app/assets/stylesheets
+         C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/neat-1.7.2/app/assets/stylesheets
+         C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/susy-2.2.9/sass
+         C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/bitters-1.1.0/app/assets/stylesheets
+         C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/compass-core-1.0.3/stylesheets
+         Compass::SpriteImporter
+        on line 2 of _websiteSetting.scss
+        from line 3 of _layout.scss
+        from line 11 of SKportfoilo.scss
+        from line 7 of SK-index.scss
+
+1: /**
+2: =============================================================================
+3:  portfoilo of Shih-Kai in Index style
+4: =============================================================================
+5: **\/
+6: 
+7: @import 'SKportfoilo';
+
+Backtrace:
+_websiteSetting.scss:2
+_layout.scss:3
+SKportfoilo.scss:11
+SK-index.scss:7
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/import_node.rb:45:in `import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/engine.rb:295:in `render_with_sourcemap'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:412:in `run'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `load'
+C:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: breakpoint.\A        Load paths:\A          C:/Users/kevin/Dropbox/Public/2016_Portfolio_shihKai/css/sass\A          C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/bourbon-4.2.6/app/assets/stylesheets\A          C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/neat-1.7.2/app/assets/stylesheets\A          C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/susy-2.2.9/sass\A          C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/bitters-1.1.0/app/assets/stylesheets\A          C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 2 of _websiteSetting.scss\A         from line 3 of _layout.scss\A         from line 11 of SKportfoilo.scss\A         from line 7 of SK-index.scss\A \A 1: /**\A 2: =============================================================================\A 3:  portfoilo of Shih-Kai in Index style\A 4: =============================================================================\A 5: **/\A 6: \A 7: @import 'SKportfoilo';"; }

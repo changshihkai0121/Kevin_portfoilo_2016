@@ -141,3 +141,16 @@
     letter-spacing: 3px;
     @include fontsFamily_basicSetting(700);
 }
+
+@mixin rotat_transform($deg) {
+    transform: rotate($deg);
+    -ms-transform: rotate($deg); // Internet Explorer 
+    -moz-transform: rotate($deg); // Firefox
+    -webkit-transform: rotate($deg); // Safari & Chrome
+    -o-transform: rotate($deg); // Opera
+}
+
+@mixin PC_NextandPrivateBtn($deg, $float:left) {
+    float: $float;
+    @include rotat_transform($deg);
+}

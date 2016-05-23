@@ -538,7 +538,7 @@ p {
   }
   .container .content .countent-Time #content-After .face-left img {
     position: relative;
-    left: 1%;
+    left: -1.5%;
   }
   .container .content .countent-Time #content-Before {
     width: 50%;

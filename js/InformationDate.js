@@ -53,31 +53,31 @@ var beforeData = [
 	'project_mainPic':'/images/i01@1x.jpg'
 },
 {
-	'project_id':'p04',
+	'project_id':'p05',
 	'cat_id':'i02',
 	'project_title':'月曆設計',
 	'project_mainPic':'/images/i01@1x.jpg'
 },
 {
-	'project_id':'p05',
+	'project_id':'p06',
 	'cat_id':'i02',
 	'project_title':'海報設計',
 	'project_mainPic':'/images/i01@1x.jpg'
 },
 {
-	'project_id':'p06',
+	'project_id':'p07',
 	'cat_id':'i02',
 	'project_title':'MV動畫',
 	'project_mainPic':'/images/i01@1x.jpg'
 },
 {
-	'project_id':'p07',
+	'project_id':'p08',
 	'cat_id':'i02',
 	'project_title':'插畫',
 	'project_mainPic':'/images/i01@1x.jpg'
 },
 {
-	'project_id':'p08',
+	'project_id':'p09',
 	'cat_id':'i02',
 	'project_title':'手繪',
 	'project_mainPic':'/images/i01@1x.jpg'
@@ -85,44 +85,131 @@ var beforeData = [
 ];
 var beforeInformation = [
 {
-	'project_id':'p01',
+	'project_id':'p00',
 	'project_title':'AAA',
-	'project_how':'',
-	'project_what':'',
-	'project_why':''
+	'project_Infor':'卡代表著我們的紙牌遊戲，厝是代表著家，家是一切最基本的社會，由家這個環境中，學習到人與人相處的方式，從這些相處之道凝煉出人生的智慧，卡牌中呈現出許多諺語的智慧，並帶著濃濃的台灣味。',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p00',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p00',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
 },
 {
 	'project_id':'p01',
 	'project_title':'AAA',
-	'project_how':'',
-	'project_what':'',
-	'project_why':''
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
 },
 {
 	'project_id':'p01',
 	'project_title':'AAA',
-	'project_how':'',
-	'project_what':'',
-	'project_why':''
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
 },
 {
-	'project_id':'p01',
+	'project_id':'p02',
 	'project_title':'AAA',
-	'project_how':'',
-	'project_what':'',
-	'project_why':''
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
 },
 {
-	'project_id':'p01',
+	'project_id':'p03',
 	'project_title':'AAA',
-	'project_how':'',
-	'project_what':'',
-	'project_why':''
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
 },
 {
-	'project_id':'p01',
+	'project_id':'p04',
 	'project_title':'AAA',
-	'project_how':'',
-	'project_what':'',
-	'project_why':''
-},{},{},{},{},{},{},{},{}];
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p04',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p05',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p05',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p06',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p07',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p07',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p08',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+},
+{
+	'project_id':'p09',
+	'project_title':'AAA',
+	'project_Infor':'',
+	'project_Img':{
+		'img01':'/images/02.jpg'
+	}
+}
+];

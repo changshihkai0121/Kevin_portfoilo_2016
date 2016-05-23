@@ -106,30 +106,56 @@
                     height: 88%;
                     .contentBlock {
                         width: auto;
-                        height: 76.371%;
-                        margin: 55px 4.5%;
+                        height: 72.371%;
+                        margin: 0 4.5%;
+                        margin-top: 55px;
                         margin-right: 15%;
                         .slideshowInfo {
                             float: left;
                             width: 200%;
                             height: 100%;
-                            .slideShow-Block{
+                            .slideShow-Block {
                                 width: 50%;
                                 display: inline-block;
                                 height: 100%;
                                 float: left;
-                                .slideshow-onecontent{
+                                .slideshow-onecontent {
                                     width: 14%;
                                     overflow: hidden;
                                     margin-right: 20px;
-                                    float:left;
+                                    float: left;
                                     display: inline-block;
-                                    height: 100%;
-                                    img{
+                                    height: 95%;
+                                    .mask-cover {
+                                        width: 7%;
+                                        height: 95%;
+                                        position: absolute;
+                                        cursor: pointer;
+                                        opacity: 0;
+                                        background-color: rgba(0, 0, 0, .8);
+                                        &:hover{opacity: 1;}
+                                        &:active{opacity: 1;}
+                                    }
+                                    img {
                                         height: 100%;
                                         width: auto;
                                     }
                                 }
+                            }
+                        }
+                    }
+                    .choose-slideshow-page {
+                        margin: 0 auto;
+                        .slideshowcontent {
+                            img {
+                                margin-right: 30px;
+                                @include PC_NextandPrivateBtn(-90deg, left);
+                            }
+                        }
+                        .slideshowborder {
+                            border: 0px;
+                            img {
+                                @include PC_NextandPrivateBtn(-90deg, right);
                             }
                         }
                     }
@@ -150,9 +176,6 @@
                             color: #ececec;
                         }
                     }
-                }
-                .choose-slideshow-page{
-
                 }
             }
         }

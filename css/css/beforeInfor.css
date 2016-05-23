@@ -1,0 +1,17 @@
+/**
+=============================================================================
+ portfoilo of Shih-Kai in 2016 Before Information style
+=============================================================================
+**/
+.BF-container {
+  width: auto;
+  height: 72.371%;
+  margin: 0 4.5%;
+  margin-top: 55px;
+  margin-right: 15%;
+}
+
+.BF-container .content {
+  height: 100%;
+  float: left;
+}
