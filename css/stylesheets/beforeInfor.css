@@ -10,44 +10,176 @@
     en => TrajanPro-Bold, TrajanPro-Regular 
 =======================================
 **/
+@media (min-width: 0px) {
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
+    margin: 0% auto;
+    z-index: 999;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent {
+    display: none;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowborder {
+    border: 0px;
+    position: absolute;
+  }
+
+  .choose-cat-PC {
+    display: none;
+  }
+
+  .BF-container {
+    overflow: hidden;
+    width: 90%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+  .BF-container .slideshowInfo {
+    position: relative;
+    width: 100%;
+    z-index: 99;
+  }
+  .BF-container .slideshowInfo .content {
+    display: inline-block;
+    color: white;
+    text-align: left;
+    margin: 0 0 2% 0;
+  }
+  .BF-container .slideshowInfo .content .BF-image img {
+    width: 100%;
+  }
+  .BF-container .slideshowInfo .content .BF-block .BF-Title {
+    line-height: 60px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .BF-container .slideshowInfo .content .BF-block .BF-Title .BF-projectCat {
+    font-size: 1rem;
+    margin-left: 10%;
+  }
+  .BF-container .slideshowInfo .content .BF-block .BF-Information {
+    font-size: 0.825rem;
+    letter-spacing: 2px;
+    line-height: 18px;
+    text-align: justify;
+    font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .download-content {
+    float: right;
+    display: inline-block;
+  }
+  .download-content span {
+    float: right;
+    display: inline-block;
+    line-height: 36px;
+    font-size: 0.825rem;
+  }
+  .download-content a {
+    float: right;
+    color: white;
+    text-decoration: none;
+  }
+  .download-content a:hover {
+    color: #cecece;
+    text-decoration: none;
+  }
+  .download-content a:active {
+    color: #cecece;
+    text-decoration: none;
+  }
+  .download-content .Download-Btn {
+    width: 15%;
+    float: right;
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .BF-container {
+    height: 70%;
+  }
+  .BF-container .slideshowInfo .content .BF-image img {
+    width: 100%;
+  }
+}
 @media (min-width: 1024px) {
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
+    margin: 0 auto;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent {
+    display: inline-block;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowborder {
+    position: static;
+    border-right: 0px;
+  }
+
+  .choose-cat-PC {
+    display: block;
+  }
+
   .BF-container {
     width: auto;
     height: 72.371%;
     margin: 0 4.5%;
     margin-top: 55px;
-    margin-right: 15%;
+    margin-right: 20%;
+    overflow: hidden;
+    padding: 0px;
   }
-  .BF-container .content {
-    position: absolute;
-    color: white;
-    width: 76%;
+  .BF-container .slideshowInfo {
+    float: left;
     height: auto;
-    padding: 0;
-    text-align: left;
+    position: relative;
   }
-  .BF-container .content img {
+  .BF-container .slideshowInfo .content {
+    margin: 0 0 0 0;
+    color: white;
+    height: auto;
+    overflow: hidden;
+    margin-right: 20px;
+    float: left;
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  .BF-container .slideshowInfo .content .BF-image {
     display: inline-block;
     width: 60%;
     max-width: 620px;
     max-height: 440px;
   }
-  .BF-container .content .BF-block {
-    width: 30%;
+  .BF-container .slideshowInfo .content .BF-image img {
+    width: 90%;
+  }
+  .BF-container .slideshowInfo .content .BF-block {
+    width: 40%;
     display: inline-block;
-    padding-left: 45px;
-    padding: 80px 0 0 45px;
+    padding: 5% 0 0 0;
     vertical-align: top;
   }
-  .BF-container .content .BF-block .BF-Title {
-    font-size: 2.25rem;
+  .BF-container .slideshowInfo .content .BF-block .BF-Title {
+    line-height: inherit;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
     font-weight: 700;
   }
-  .BF-container .content .BF-block .BF-Information {
-    margin-top: 100px;
-    font-size: 1.125rem;
+  .BF-container .slideshowInfo .content .BF-block .BF-Title .BF-projectCat {
+    display: none;
+  }
+  .BF-container .slideshowInfo .content .BF-block .BF-Information {
+    margin-top: 50px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    font-size: 1.0625rem;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
     font-weight: 400;

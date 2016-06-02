@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <title>Shih Kai Portfoilo</title>
     <link rel="shortcut icon" href="/images/logo/logo.ico" />
     <link rel="bookmark" href="/images/logo/logo.ico" />
@@ -32,10 +33,10 @@
                         <a href="/about.html">ABOUT</a>
                     </li>
                     <li class="menu-list">
-                        <a href="/2016before.html">AFTER</a>
+                        <a href="">AFTER</a>
                     </li>
                     <li class="menu-list">
-                        <a href="">BEFORE</a>
+                        <a href="/2016before.html">BEFORE</a>
                     </li>
                 </ul>
             </div>
@@ -49,18 +50,17 @@
             <div class="beforeContent_All">
                 <div class="beforeTitle-PC">BEFORE</div>
                 <div class="content-listInfomation">
-                    <select name="choose-cat" id="choose-cat" class="selectStyle">
-                    </select>
                     <div id="choose-cat-PC" class="choose-cat-PC"></div>
                     <div id="pageInfor" class="BF-container">
-                        <!-- Information -->
-                        
+                        <div id="slideshow-container" class="slideshowInfo">
+                            <!-- Information -->
+                        </div>
                     </div>
                     <div class="choose-slideshow-page">
-                        <div id="slideshowPrivate" class="slideshowcontent slideshowborder" onClick="slideshowBtn(this.id)">
+                        <div id="slideshowPrivate" class="slideshowcontent slideshowborder hvr-grow" onClick="slideshowBtn(this.id)">
                             <img src="/images/private.png" alt="Private" class="images-icon slideshow-change">
                         </div>
-                        <div id="slideshownext" class="slideshowcontent" onClick="slideshowBtn(this.id)">
+                        <div id="slideshownext" class="slideshowcontent hvr-grow" onClick="slideshowBtn(this.id)">
                             <img src="/images/next.png" alt="Next" class="images-icon slideshow-change">
                         </div>
                     </div>
@@ -84,10 +84,9 @@ try {
     });
 } catch (e) {}
 </script>
-<script type="text/javascript" src="/js/InformationDate.js"></script>
+<script type="text/javascript" src="/js/BeforeDate.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
 <script type="text/javascript" src="/js/pace.js"></script>
-<script type="text/javascript" src="/js/jquery.history.js"></script>
 <script type="text/javascript" src="/js/beforeInfo.js"></script>
 
 </html>

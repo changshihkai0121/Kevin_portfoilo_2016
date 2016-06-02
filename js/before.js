@@ -12,6 +12,7 @@ var $chooseOption = $('#choose-cat'), // post choose-cat option information
     slidepage = 0;
 
 $(function() {
+    BasicWidth = $(window).width();
     // past option pc & mobile is different template
     // option 內容
     for (i = 0; i < beforeIndex.length; i++) {
@@ -28,7 +29,9 @@ $(function() {
     // 詳細內容
     if (_windowWidth <= 768) {
         for (var a = 0; a < beforeData.length; a++) {
-            before_default += '<li class=' + '\"slideshow-onecontent\"' + '><img src=' + beforeData[a].project_mainPic + ' alt=' + beforeData[a].project_title + ' /></li>';
+            before_default += '<li id=' + beforeData[a].project_id + ' class=' + '\"slideshow-onecontent\"' + ' onClick=' + '\"ChangePage(this.id)\"' + '>';
+            before_default += '<div class=' + '\"tipsBlock\"' + '><h2>' + beforeData[a].project_title + '</h2><p>' + beforeData[a].project_cat + '</p></div>';
+            before_default += '<img src=' + beforeData[a].project_mainPic + ' alt=' + beforeData[a].project_title + ' /></li>';
             $slideshowList.html(before_default);
         }
         // 如果為電腦尺寸則分成6個一組帶入
@@ -54,12 +57,15 @@ $(function() {
     }
     slideshow_isRetina(); //如果顯示其為retina則換成2倍的圖片
     //自動計算高度及行高
-    setTimeout(function() {
-        chooseHeight = $('.choose-slideshow-page').height();
+    var refreshInterval = setInterval(function() {
         slideImgHeight = $('.slideshow-onecontent img').height();
-        $('.choose-slideshow-page').css('line-height', chooseHeight + 'px');
-        if (_windowWidth <= 768) {
-            $contentBlock.css('height', slideImgHeight);
+        if (slideImgHeight > 0) {
+            chooseHeight = $('.choose-slideshow-page').height();
+            $('.choose-slideshow-page').css('line-height', chooseHeight + 'px');
+            if (_windowWidth <= 768) {
+                $contentBlock.css('height', slideImgHeight);
+            }
+            clearInterval(refreshInterval);
         }
     }, 500);
 });
@@ -72,7 +78,9 @@ $chooseOption.on('change', function() {
         templatecontent = '';
     if (Value == 'i00') {
         for (var i = 0; i < beforeData.length; i++) {
-            templatecontent += '<li class=' + '\"slideshow-onecontent\"' + '><img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
+            templatecontent += '<li id=' + beforeData[i].project_id + ' class=' + '\"slideshow-onecontent\"' + ' onClick=' + '\"ChangePage(this.id)\"' + '>';
+            templatecontent += '<div class=' + '\"tipsBlock\"' + '><h2>' + beforeData[i].project_title + '</h2><p>' + beforeData[i].project_cat + '</p></div>';
+            templatecontent += '<img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
             $slideshowList.html(templatecontent);
         };
         $slideshowList.animate({ 'bottom': slideshowContentHeight * slidepage });
@@ -80,7 +88,10 @@ $chooseOption.on('change', function() {
     } else if (Value == 'i01') {
         for (var i = 0; i < beforeData.length; i++) {
             if (Value == beforeData[i].cat_id) {
-                templatecontent += '<li class=' + '\"slideshow-onecontent\"' + '><img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
+                templatecontent += '<li id=' + beforeData[i].project_id + ' class=' + '\"slideshow-onecontent\"' + ' onClick=' + '\"ChangePage(this.id)\"' + '>';
+                templatecontent += '<div class=' + '\"tipsBlock\"' + '><h2>' + beforeData[i].project_title + '</h2><p>' + beforeData[i].project_cat + '</p></div>';
+                templatecontent += '<img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
+                // templatecontent += '<li id=' + beforeData[i].project_id + ' class=' + '\"slideshow-onecontent\"' + ' onClick=' + '\"ChangePage(this.id)\"' + '><img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
                 $slideshowList.html(templatecontent);
             }
         };
@@ -89,7 +100,10 @@ $chooseOption.on('change', function() {
     } else if (Value == 'i02') {
         for (var i = 0; i < beforeData.length; i++) {
             if (Value == beforeData[i].cat_id) {
-                templatecontent += '<li class=' + '\"slideshow-onecontent\"' + '><img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
+                templatecontent += '<li id=' + beforeData[i].project_id + ' class=' + '\"slideshow-onecontent\"' + ' onClick=' + '\"ChangePage(this.id)\"' + '>';
+                templatecontent += '<div class=' + '\"tipsBlock\"' + '><h2>' + beforeData[i].project_title + '</h2><p>' + beforeData[i].project_cat + '</p></div>';
+                templatecontent += '<img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
+                // templatecontent += '<li id=' + beforeData[i].project_id + ' class=' + '\"slideshow-onecontent\"' + ' onClick=' + '\"ChangePage(this.id)\"' + '><img src=' + beforeData[i].project_mainPic + ' alt=' + beforeData[i].project_title + ' /></li>';
                 $slideshowList.html(templatecontent);
             }
         };
@@ -107,7 +121,7 @@ function slideshowBtn(btnID) { //判斷點哪一顆
     objectSize(); // 將Device寬高帶入
     if (_windowWidth <= 768) { // 判斷螢幕尺寸
         switch (btnID) {
-            case 'slideshowPrivate':
+            case 'slideshownext':
                 if (datalength >= slidepage) { //如果不是最後一張
                     slidepage = slidepage + 1;
                     if (slidepage < datalength) {
@@ -118,7 +132,7 @@ function slideshowBtn(btnID) { //判斷點哪一顆
                     }
                 }
                 break;
-            case 'slideshownext':
+            case 'slideshowPrivate':
                 if (slidepage <= 0) { //如果是最後一張
                     slidepage = (datalength - 1);
                     $slideshowList.animate({ 'bottom': slideshowContentHeight * slidepage });
@@ -168,6 +182,7 @@ function slideshowBtn(btnID) { //判斷點哪一顆
 // PC 版本選擇按鈕點擊後
 function PCselect_project(btn_name) {
     var templatecontent = '';
+    slidepage = 0;
     if (btn_name == 'i00') {
         frequency = Math.ceil(beforeData.length / 6);
         roundtime = 0;
@@ -188,12 +203,15 @@ function PCselect_project(btn_name) {
             roundtime = roundtime + 6;
             $slideshowList.html(default_information);
         };
+        $slideshowList.animate({ 'left': slidepage });
     } else if (btn_name == 'i01') {
         $slideshowList.html('');
         PC_loadInfor(btn_name);
+        $slideshowList.animate({ 'left': slidepage });
     } else if (btn_name == 'i02') {
         $slideshowList.html('');
         PC_loadInfor(btn_name);
+        $slideshowList.animate({ 'left': slidepage });
     }
 }
 
@@ -249,20 +267,20 @@ function PC_loadInfor(choose) {
  */
 function PC_template(numA) {
     Pc_templateInfo += '<li class=' + '\"slideshow-onecontent\"' + '>';
-    Pc_templateInfo += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '></div>';
-    Pc_templateInfo += '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
+    Pc_templateInfo += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '><p>' + beforeData[numA].project_cat + '</p><h2>';
+    Pc_templateInfo += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
 }
 
 function default_template(numA) {
     default_information += '<li class=' + '\"slideshow-onecontent\"' + '>';
-    default_information += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '></div>';
-    default_information += '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
+    default_information += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '><p>' + beforeData[numA].project_cat + '</p><h2>';
+    default_information += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
 }
 
 function before_template(numA) {
     before_default += '<li class=' + '\"slideshow-onecontent\"' + '>';
-    before_default += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '></div>';
-    before_default += '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
+    before_default += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '><p>' + beforeData[numA].project_cat + '</p><h2>';
+    before_default += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
 }
 //PC_template end
 
@@ -295,5 +313,10 @@ $(window).resize(function() {
     $('.choose-slideshow-page').css('line-height', chooseHeight + 'px');
     if (_windowWidth <= 768) {
         $('.contentBlock').css('height', slideImgHeight);
+    }
+    resizeWidth = $(window).width();
+    totalgap = BasicWidth - resizeWidth;
+    if (totalgap >= 512 || totalgap <= -512) {
+        window.location.reload();
     }
 });

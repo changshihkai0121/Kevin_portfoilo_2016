@@ -1,0 +1,512 @@
+/**
+=============================================================================
+ portfoilo of Shih-Kai's about page style
+=============================================================================
+**/
+
+@import 'websiteSetting';
+@import 'mixin';
+.rotate-circle {
+    @include rotat_transform(180deg);
+}
+
+@include _break("mobile") {
+    .mobile-hide {
+        display: none;
+    }
+    .container {
+        .content {
+            .aboutUs-container {
+                height: 100%;
+                width: 100%;
+                background-color: #2B1F31;
+                overflow: hidden;
+                .about-contentInfor {
+                    height: 300%;
+                    position: relative;
+                    .aboutcontent {
+                        display: block;
+                        width: 100%;
+                        color: white;
+                        .contentleft {
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                            padding: 15% 0 0 0;
+                            img {
+                                width: 30%;
+                            }
+                        }
+                        .contentright {
+                            width: 90.62%;
+                            display: block;
+                            padding: 4.69%;
+                            h2 {
+                                font-size: 1.25rem;
+                                width: 80%;
+                                text-align: center;
+                                margin: 0 auto;
+                                span {
+                                    display: none;
+                                }
+                            }
+                            p {
+                                line-height: 1.5rem;
+                                padding-top: 3%;
+                                text-align: justify;
+                            }
+                            .connectioncontent {
+                                width: 100%;
+                                display: table;
+                                img {
+                                    display: table-cell;
+                                    width: 50px;
+                                    float: left;
+                                }
+                                p {
+                                    width: 84%;
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    line-height: 58px;
+                                    padding-top: 0;
+                                }
+                                .mail-siteImg {
+                                    width: 50px;
+                                }
+                                a {
+                                    p {
+                                        color: white;
+                                        width: 84%;
+                                        line-height: 58px;
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                        text-align: left;
+                                        float: left;
+                                    }
+                                    &:hover {
+                                        color: #cecece;
+                                        text-decoration: none;
+                                    }
+                                    &:active {
+                                        color: #cecece;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                        .contentrightBox {
+                            padding: 30% 4.69% 0 4.69%;
+                            width: 90.62%;
+                        }
+                        .contentleftBox {
+                            padding: 30% 4.69% 0 4.69%;
+                            width: 90.62%;
+                        }
+                        .about-content {
+                            text-align: justify;
+                        }
+                        .Iconleft {
+                            width: 100%;
+                            float: inherit;
+                            text-align: center;
+                            .Imgradius {
+                                width: 45px;
+                                height: 45px;
+                                background-color: #413D65;
+                                border-color: transparent;
+                                @include border_radius(99em);
+                            }
+                        }
+                        .right-Information {
+                            width: 100%;
+                            min-height: 48px;
+                            text-align: center;
+                            float: left;
+                            .informationContent {
+                                line-height: 20px;
+                                letter-spacing: 1px;
+                                font-size: 0.825rem;
+                                .job-title-top {
+                                    border-bottom: 1px solid #413D65;
+                                    padding-bottom: 5px;
+                                }
+                                .job-title-bottom {
+                                    display: inline-block;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                        .about-next {
+                            text-align: center;
+                            position: fixed;
+                            width: 100%;
+                            bottom: 10%;
+                            img {
+                                width: 20px;
+                            }
+                        }
+                        .usful-container {
+                            height: 100%;
+                            padding: 20% 4.69% 0 4.69%;
+                            width: 90.62%;
+                            .coding-container {
+                                height: 100%;
+                                .coding-title {
+                                    width: 100%;
+                                    color: #5FB9B0;
+                                    border-bottom: 3px solid #5FB9B0;
+                                    text-align: center;
+                                    img {
+                                        width: 20%;
+                                    }
+                                    p {
+                                        font-size: 1.0625rem;
+                                        margin-bottom: 6px;
+                                        span {
+                                            border: 3px solid #5FB9B0;
+                                            @include border_radius(99em);
+                                            padding: 3px 15px;
+                                        }
+                                    }
+                                }
+                            }
+                            .coding-text {
+                                display: inline-table;
+                                width: 70%;
+                                height: 85px;
+                                min-height: 85px;
+                                margin: 2% 10% 2% 20%;
+                                h2 {
+                                    font-size: 1rem;
+                                    color: #cecece;
+                                    border-left: 5px solid #5FB9B0;
+                                    padding-left: 10px;
+                                    letter-spacing: 1px;
+                                    line-height: 20px;
+                                    margin: 2% 0;
+                                }
+                                p {
+                                    font-size: 0.875rem;
+                                    color: white;
+                                    letter-spacing: 1px;
+                                    line-height: 20px;
+                                    margin-bottom: 5%;
+                                }
+                            }
+                            .tools-container {
+                                height: 100%;
+                                .tools-title {
+                                    border-bottom: 3px solid #BEF992;
+                                    text-align: center;
+                                    p {
+                                        font-size: 1.0625rem;
+                                        margin-bottom: 6px;
+                                        span {
+                                            border: 3px solid #BEF992;
+                                            @include border_radius(99em);
+                                            padding: 3px 15px;
+                                        }
+                                    }
+                                    img {
+                                        width: 20%;
+                                    }
+                                }
+                                .tools-content {
+                                    width: 70%;
+                                    margin: 5% auto;
+                                    .tools-text {
+                                        h2 {
+                                            font-size: 1rem;
+                                            color: #cecece;
+                                            border-left: 5px solid #BEF992;
+                                            padding-left: 10px;
+                                            letter-spacing: 1px;
+                                            line-height: 20px;
+                                            margin: 2% 0;
+                                        }
+                                        p {
+                                            display: inline-block;
+                                            font-size: 0.875rem;
+                                            color: white;
+                                            letter-spacing: 1px;
+                                            line-height: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include _break("pad") {}
+
+@include _break("padHor") {
+    .mobile-hide {
+        display: block;
+    }
+    .container {
+        .content {
+            padding: 2% 2%;
+            .aboutUs-container {
+                height: 94%;
+                .about-contentInfor {
+                    .aboutcontent {
+                        @include Trisection;
+                        display: table;
+                        width: 100%;
+                        .about-content {
+                            max-height: 75px;
+                            width: 70%;
+                            text-align: left;
+                            margin: 8% 10% 8% 20%;
+                            display: table;
+                        }
+                        .contentleft {
+                            display: table-cell;
+                            width: 50%;
+                            text-align: center;
+                            vertical-align: middle;
+                            padding: 0;
+                            img {
+                                width: 40%;
+                            }
+                        }
+                        .contentright {
+                            display: table-cell;
+                            width: 45%;
+                            vertical-align: middle;
+                            padding: 0;
+                            h2 {
+                                width: 69%;
+                                line-height: 4rem;
+                                font-size: 1.5rem;
+                                text-align: inherit;
+                                margin: 0;
+                                span {
+                                    display: inline-block;
+                                    float: right;
+                                    img {
+                                        float: right;
+                                        width: 30%;
+                                    }
+                                }
+                            }
+                            p {
+                                width: 70%;
+                                line-height: 1.5rem;
+                                padding-top: 0;
+                                text-align: inherit;
+                            }
+                            .connectioncontent {
+                                width: 30%;
+                                display: inline-block;
+                                margin: 2% 0 0 -3%;
+                                .mail-siteImg {
+                                    width: 30%;
+                                }
+                                img {
+                                    width: 30%;
+                                    display: inline-block;
+                                }
+                                a {
+                                    color: white;
+                                    p {
+                                        display: inline-block;
+                                        width: auto;
+                                        line-height: 24px;
+                                    }
+                                    &:hover {
+                                        color: #cecece;
+                                        text-decoration: none;
+                                    }
+                                    &:active {
+                                        color: #cecece;
+                                        text-decoration: none;
+                                    }
+                                }
+                                p {
+                                    width: auto;
+                                    line-height: 24px;
+                                    font-size: 0.725rem;
+                                    display: inline-block;
+                                    position: absolute;
+                                    margin-top: 1.5%;
+                                }
+                            }
+                        }
+                        .contentrightBox {
+                            width: auto;
+                            vertical-align: middle;
+                            display: table-cell;
+                            text-align: center;
+                            padding: 0px;
+                            .PC-AboutcontentA{margin:0 10% 9% 20%;}
+                            .PC-AboutcontentB{margin:0 10% 18% 20%;}
+                        }
+                        .contentleftBox {
+                            width: 50%;
+                            vertical-align: middle;
+                            display: table-cell;
+                            text-align: right;
+                            padding: 0;
+                        }
+                        .Iconleft {
+                            text-align: inherit;
+                            width: 30%;
+                            float: left;
+                            .Imgradius {
+                                width: 65px;
+                                height: 65px;
+                            }
+                        }
+                        .language-information {
+                            position: absolute;
+                            margin-top: 37.5px;
+                        }
+                        .right-Information {
+                            margin-left: 30px;
+                            position: absolute;
+                            display: inline-block;
+                            text-align: inherit;
+                            width: auto;
+                            min-height: inherit;
+                            float: inherit;
+                            .informationContent {
+                                line-height: 24px;
+                                letter-spacing: 1px;
+                                font-size: 0.9375rem;
+                                .job-title-top {
+                                    border-bottom: 1px solid #413D65;
+                                    padding-bottom: 5px;
+                                }
+                                .job-title-bottom {
+                                    display: inline-block;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                        .about-next {
+                            position: fixed;
+                            width: 96%;
+                            bottom: 10%;
+                            left: 2%;
+                            text-align: center;
+                            img {
+                                cursor: pointer;
+                                width: 25px;
+                            }
+                        }
+                        .usful-container {
+                            display: table-cell;
+                            vertical-align: middle;
+                            padding: 0;
+                            width: auto;
+                            height: auto;
+                            text-align: center;
+                            .coding-container {
+                                display: table-cell;
+                                margin: 0 auto;
+                                .coding-title {
+                                    width: 100%;
+                                    color: #5FB9B0;
+                                    border-bottom: 3px solid #5FB9B0;
+                                    img {
+                                        width: 5%;
+                                    }
+                                    p {
+                                        font-size: 1.3rem;
+                                        margin-bottom: 6px;
+                                        span {
+                                            border: 3px solid #5FB9B0;
+                                            @include border_radius(99em);
+                                            padding: 3px 15px;
+                                        }
+                                    }
+                                }
+                                .conding-content {
+                                    text-align: left;
+                                    .coding-text {
+                                        display: inline-table;
+                                        width: 70%;
+                                        height: 85px;
+                                        min-height: 85px;
+                                        margin: 2% 10% 2% 20%;
+                                        h2 {
+                                            font-size: 1rem;
+                                            color: #cecece;
+                                            border-left: 5px solid #5FB9B0;
+                                            padding-left: 10px;
+                                            letter-spacing: 1px;
+                                            line-height: 24px;
+                                            margin-bottom: 2%;
+                                        }
+                                        p {
+                                            font-size: 1rem;
+                                            color: white;
+                                            letter-spacing: 1px;
+                                            line-height: 24px;
+                                            margin-bottom: 5%;
+                                        }
+                                    }
+                                }
+                            }
+                            .tools-container {
+                                width: 60%;
+                                margin: 0 auto;
+                                display: table-cell;
+                                .tools-title {
+                                    width: 100%;
+                                    color: #BEF992;
+                                    border-bottom: 3px solid #BEF992;
+                                    img {
+                                        width: 5%;
+                                    }
+                                    p {
+                                        font-size: 1.3rem;
+                                        margin-bottom: 6px;
+                                        span {
+                                            border: 3px solid #BEF992;
+                                            @include border_radius(99em);
+                                            padding: 3px 15px;
+                                        }
+                                    }
+                                }
+                                .tools-content {
+                                    text-align: left;
+                                    margin: 3% auto;
+                                    .tools-text {
+                                        display: inline-table;
+                                        width: 26%;
+                                        height: 85px;
+                                        min-height: 85px;
+                                        margin: 0% 10% 2% 20%;
+                                        p {
+                                            display: inherit;
+                                        }
+                                    }
+                                    .tools-right {
+                                        margin-left: 5%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #aboutPage3 {
+                        width: 60%;
+                        margin: 0 auto;
+                    }
+                    #aboutPage4 {
+                        width: 60%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include _break("desktop") {}

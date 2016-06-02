@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <title>Shih Kai Portfoilo</title>
     <link rel="shortcut icon" href="/images/logo/logo.ico" />
     <link rel="bookmark" href="/images/logo/logo.ico" />
     <link rel="stylesheet" href="/css/stylesheets/SK-index.css">
-    <link rel="stylesheet" href="/css/stylesheets/fonts.css">
+    <link rel="stylesheet" href="/css/stylesheets/SK-2016before.css">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheets/SK-2016after.css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 </head>
 
@@ -28,13 +30,13 @@
                         <img class="images-icon" src="/images/menu-close.png" alt="mobile-menu-Icon">
                     </li>
                     <li class="menu-list">
-                        <a href="">ABOUT</a>
+                        <a href="/about.html">ABOUT</a>
                     </li>
                     <li class="menu-list">
                         <a href="">AFTER</a>
                     </li>
                     <li class="menu-list">
-                        <a href="">BEFORE</a>
+                        <a href="/2016before.html">BEFORE</a>
                     </li>
                 </ul>
             </div>
@@ -45,6 +47,28 @@
     </div>
     <div id="container" class="container">
         <div class="content">
+            <div class="beforeContent_All">
+                <div class="beforeTitle-PC">AFTER</div>
+                <div class="content-listInfomation">
+                    <select name="choose-cat" id="choose-cat" class="selectStyle">
+                    </select>
+                    <div id="choose-cat-PC" class="choose-cat-PC"></div>
+                    <div id="slideshowContent-block" class="contentBlock">
+                        <ul class="slideshowInfo">
+                            <!-- Default is include all data -->
+                        </ul>
+                    </div>
+                    <div class="choose-slideshow-page">
+                        <div id="slideshowPrivate" class="slideshowcontent hvr-grow slideshowborder" onClick="slideshowBtn(this.id)">
+                            <img src="/images/private.png" alt="Private" class="images-icon slideshow-change">
+                        </div>
+                        <div id="slideshownext" class="slideshowcontent hvr-grow" onClick="slideshowBtn(this.id)">
+                            <img src="/images/next.png" alt="Next" class="images-icon slideshow-change">
+                        </div>
+                        <img src="/images/keybord-click.png" alt="Keytips" class="Keytips">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer">
@@ -63,7 +87,8 @@ try {
     });
 } catch (e) {}
 </script>
+<script type="text/javascript" src="/js/AfterDate.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/after.js"></script>
 <script type="text/javascript" src="/js/pace.js"></script>
-
 </html>

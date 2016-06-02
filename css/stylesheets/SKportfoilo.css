@@ -166,7 +166,7 @@ p {
 .copyright {
   z-index: 9999;
   position: fixed;
-  bottom: 35px;
+  bottom: 25px;
   color: white;
   width: 100%;
   display: block;
@@ -284,4 +284,23 @@ p {
         100% {
     transform: rotateZ(330deg) rotateX(10deg);
   }
+}
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }

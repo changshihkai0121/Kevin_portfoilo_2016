@@ -171,7 +171,7 @@ p {
 .copyright {
   z-index: 9999;
   position: fixed;
-  bottom: 35px;
+  bottom: 25px;
   color: white;
   width: 100%;
   display: block;
@@ -290,6 +290,26 @@ p {
     transform: rotateZ(330deg) rotateX(10deg);
   }
 }
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -471,9 +491,25 @@ p {
     text-align: center;
     z-index: 996;
   }
+  .container .content .countent-Time .contentChange .shihKaiporfoiloText {
+    opacity: 0;
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin: -5% 0 0 7%;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .container .content .countent-Time .contentChange .beforeToafterInfo {
+    opacity: 0;
+    width: 50%;
+    float: right;
+    text-align: right;
+    margin: -5% 7% 0 0;
+    color: rgba(255, 255, 255, 0.8);
+  }
   .container .content .countent-Time .contentChange .move-Icon {
     display: inline-block;
-    margin: 15% 2%;
+    margin: 15% 2% 0 2%;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -602,6 +638,13 @@ p {
     position: absolute;
     width: 50%;
     height: 100%;
+  }
+  .container .content #touchBox .touch-about {
+    width: 35%;
+    height: 60%;
+    position: absolute;
+    top: 40%;
+    left: 32.5%;
   }
 
   .copyright p {

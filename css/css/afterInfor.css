@@ -1,0 +1,18 @@
+/**
+=============================================================================
+ portfoilo of Shih-Kai in 2016 After Information style
+=============================================================================
+**/
+.container .content .beforeContent_All {
+  background-color: #5FB9B0;
+}
+
+.BF-container .slideshowInfo .content .BF-block .BF-Information a {
+  color: white;
+  text-decoration: none;
+}
+
+.BF-container .slideshowInfo .content .BF-block .BF-Information a:hover, .BF-container .slideshowInfo .content .BF-block .BF-Information a:active {
+  color: #cecece;
+  text-decoration: none;
+}

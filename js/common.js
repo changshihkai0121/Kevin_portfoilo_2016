@@ -78,7 +78,7 @@ $(function() {
             $('#paceDiv').remove();
         }, 3000);
     });
-    
+
     if (isRetina()) {
         $('.images-icon').each(function() { // all class-name: images-icon change retina use pic
             $(this).attr('src', $(this).attr('src').replace('.png', '.svg'));
@@ -101,6 +101,7 @@ $(function() {
                     $('.move-Icon p').stop().animate({ 'width': '100%' });
                     $beforeBox.find('.fontTime p').stop().animate({ 'opacity': 1 });
                     $touchAll.css('cursor', 'pointer');
+                    $('.shihKaiporfoiloText').animate({ 'opacity': 1 });
                 }
             }, timeFrame);
         }
@@ -118,6 +119,7 @@ $(function() {
                     $('.move-Icon p').stop().animate({ 'width': '60%' });
                     $beforeBox.find('.fontTime p').stop().animate({ 'opacity': 0 });
                     $touchAll.css('cursor', 'auto');
+                    $('.shihKaiporfoiloText').animate({ 'opacity': 0 }, 500);
                     return;
                 }
             }, timeFrame);
@@ -136,6 +138,7 @@ $(function() {
                 $('.move-Icon p').stop().animate({ 'width': '100%' });
                 $afterBox.find('.fontTime p').stop().animate({ 'opacity': 1 });
                 $touchAll.css('cursor', 'pointer');
+                $('.shihKaiporfoiloText').animate({ 'opacity': 1 });
             }, timeFrame);
         }
     });
@@ -153,6 +156,7 @@ $(function() {
                     $('.move-Icon p').stop().animate({ 'width': '60%' });
                     $afterBox.find('.fontTime p').stop().animate({ 'opacity': 0 });
                     $touchAll.css('cursor', 'auto');
+                    $('.shihKaiporfoiloText').animate({ 'opacity': 0 }, 500);
                 }
                 return;
             }, timeFrame);
@@ -178,16 +182,30 @@ $(function() {
     $('.closeMenu-Btn').click(function() {
         $('.menu-container').fadeOut();
     });
+    if (navigator.userAgent.match('Safari')) {
+        if (_windowWidth <= 768) {
+            $('.copyright').css('bottom', 10);
+            $('.about-next').css('bottom', '5%');
+        }
+    }
+    if (_windowHeight >= 700) {
+        $('.copyright').css('bottom', 50);
+    } else {
+        $('.copyright').css('bottom', 25);
+    }
 });
 /*  Jquery auto run function end */
-
-
 
 /* window resize action began */
 $(window).resize(function() {
     objectSize(); // include object size
     $('.face-left').css('width', _countentTimeWidth);
     $('.face-right').css('width', _countentTimeWidth);
+    if (_windowHeight >= 700) {
+        $('.copyright').css('bottom', 50);
+    } else {
+        $('.copyright').css('bottom', 25);
+    }
 });
 /* window resize action end */
 
