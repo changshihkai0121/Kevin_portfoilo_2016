@@ -18,6 +18,7 @@
     <div id="header">
         <!-- header include mobileMenu & logo -->
         <div class="mobile-menu">
+            <img id="BackUrl" src="/images/mobile-back.png" class="images-icon" alt="mobilBack" onClick="UrlBack()">
             <img class="images-icon menu-btn" src="/images/mobile-menu.png" alt="mobile-menu-Icon">
             <div class="menu-container">
                 <ul>
@@ -62,10 +63,12 @@
                         <div id="slideshowPrivate" class="slideshowcontent hvr-grow slideshowborder" onClick="slideshowBtn(this.id)">
                             <img src="/images/private.png" alt="Private" class="images-icon slideshow-change">
                         </div>
-                        <div id="slideshownext" class="slideshowcontent hvr-grow" onClick="slideshowBtn(this.id)">
-                            <img src="/images/next.png" alt="Next" class="images-icon slideshow-change">
+                        <div class="slideshowcontent">
+                            <img id="slideshownext" src="/images/next.png" alt="Next" class="images-icon slideshow-change hvr-grow" onClick="slideshowBtn(this.id)">
                         </div>
-                        <img src="/images/keybord-click.png" alt="Keytips" class="Keytips">
+                        <div id="back-list" class="back-list PC-open">
+                            <a href="/"><img src="/images/back.png" alt="Keytips" class="Keytips"><span>Back</span></a>
+                        </div>
                     </div>
                 </div>
             </div>

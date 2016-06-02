@@ -49,6 +49,19 @@ function changePage(changePage) {
     }, 1000);
 }
 
+function UrlBack() {
+    NowPage = window.location.href;
+    wherePage = NowPage.split('/')[3].split('.html')[0]
+    console.log(wherePage);
+    if (wherePage === 'about' || wherePage === '2016after' || wherePage === '2016before') {
+        window.location.href = 'index.html';
+    } else if (wherePage === '2016beforeInfo') {
+        window.location.href = '2016before.html';
+    } else if (wherePage === '2016afterInfor') {
+        window.location.href = '2016after.html';
+    }
+}
+
 /* Jquery auto run function began */
 $(function() {
     objectSize(); // include object size
@@ -188,9 +201,9 @@ $(function() {
             $('.about-next').css('bottom', '5%');
         }
     }
-    if (_windowHeight >= 700) {
+    if (_windowHeight >= 700 && _windowWidth >= 768) {
         $('.copyright').css('bottom', 50);
-    } else {
+    } else if (_windowWidth >= 768 && _windowHeight <= 699) {
         $('.copyright').css('bottom', 25);
     }
 });
@@ -201,9 +214,9 @@ $(window).resize(function() {
     objectSize(); // include object size
     $('.face-left').css('width', _countentTimeWidth);
     $('.face-right').css('width', _countentTimeWidth);
-    if (_windowHeight >= 700) {
+    if (_windowHeight >= 700 && _windowWidth >= 768) {
         $('.copyright').css('bottom', 50);
-    } else {
+    } else if (_windowWidth >= 768 && _windowHeight <= 699) {
         $('.copyright').css('bottom', 25);
     }
 });

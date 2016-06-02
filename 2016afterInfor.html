@@ -19,6 +19,7 @@
     <div id="header">
         <!-- header include mobileMenu & logo -->
         <div class="mobile-menu">
+            <img id="Mobile-Back" src="/images/mobile-back.png" class="images-icon" alt="mobilBack" onClick="UrlBack()">
             <img class="images-icon menu-btn" src="/images/mobile-menu.png" alt="mobile-menu-Icon">
             <div class="menu-container">
                 <ul>
@@ -58,11 +59,14 @@
                         </div>
                     </div>
                     <div class="choose-slideshow-page">
-                        <div id="slideshowPrivate" class="slideshowcontent slideshowborder hvr-grow" onClick="slideshowBtn(this.id)">
-                            <img src="/images/private.png" alt="Private" class="images-icon slideshow-change">
+                        <div class="slideshowcontent slideshowborder">
+                            <img id="slideshowPrivate" onClick="slideshowBtn(this.id)" src="/images/private.png" alt="Private" class="images-icon slideshow-change hvr-grow">
                         </div>
-                        <div id="slideshownext" class="slideshowcontent hvr-grow" onClick="slideshowBtn(this.id)">
-                            <img src="/images/next.png" alt="Next" class="images-icon slideshow-change">
+                        <div class="slideshowcontent" onClick="slideshowBtn(this.id)">
+                            <img id="slideshownext" src="/images/next.png" alt="Next" onClick="slideshowBtn(this.id)" class="images-icon slideshow-change hvr-grow">
+                        </div>
+                        <div id="back-list" class="back-list PC-open">
+                            <a href="/2016after.html"><img src="/images/back.png" alt="Keytips" class="Keytips"><span>Back</span></a>
                         </div>
                     </div>
                 </div>

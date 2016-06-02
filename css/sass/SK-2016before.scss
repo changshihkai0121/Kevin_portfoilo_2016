@@ -11,6 +11,8 @@
 @import 'extend'; // setting all extend
 @import 'websiteSetting';
 @include _break("mobile") {
+    .mobile-open{display: block;}
+    .PC-open{display: none;}
     .container {
         overflow: hidden;
         .content {
@@ -70,13 +72,13 @@
                                 width: 100%;
                                 bottom: 0;
                                 letter-spacing: 2px;
-                                h2{
+                                h2 {
                                     width: 90%;
                                     margin: 0 auto;
                                     font-size: 1.25rem;
                                     padding: 5% 0 10px 0;
                                 }
-                                p{
+                                p {
                                     width: 90%;
                                     margin: 0 auto;
                                     font-size: 0.825rem;
@@ -96,7 +98,6 @@
                             border-right: 1px solid white;
                         }
                         .slideshowcontent {
-                            cursor: pointer;
                             width: 45%;
                             display: inline-block;
                             .slideshow-change {
@@ -114,6 +115,8 @@
 @include _break("pad") {}
 
 @include _break("padHor") {
+    .mobile-open{display: none;}
+    .PC-open{display: block;}
     .container {
         .content {
             height: 93%;
@@ -203,6 +206,7 @@
                     .choose-slideshow-page {
                         margin: 0 auto;
                         .slideshowcontent {
+                            height: 25px;
                             img {
                                 margin-right: 30px;
                                 @include PC_NextandPrivateBtn(-90deg, left);
@@ -214,13 +218,33 @@
                                 @include PC_NextandPrivateBtn(-90deg, right);
                             }
                         }
-                        .Keytips {
-                            // display: inline-block;
-                            margin-top: 5px;
-                            margin-left: -1.5%;
-                            float: right;
-                            position: absolute;
-                            width: 2.5%;
+                        .back-list {
+                            display: block;
+                            margin-top: -25px;
+                            margin: -25px 4% 0 0;
+                            text-align: right;
+                            .Keytips {
+                                display: inline-block;
+                                height: 25px;
+                            }
+                            span {
+                                padding-left: 10px;
+                                display: table-caption;
+                                line-height: 25px;
+                                vertical-align: middle;
+                            }
+                            a {
+                                color: white;
+                                text-decoration: none;
+                                &:hover {
+                                    color: #cecece;
+                                    text-decoration: none;
+                                }
+                                &:active {
+                                    color: #cecece;
+                                    text-decoration: none;
+                                }
+                            }
                         }
                     }
                 }
