@@ -3,6 +3,26 @@
  portfoilo of Shih-Kai in 2016 After style
 =============================================================================
 **/
+@media (min-width: 1024px) {
+  .container .content .beforeContent_All .content-listInfomation .contentBlock {
+    height: 63.371%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent img {
+    height: 100%;
+    width: 140%;
+    right: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  .container .content .beforeContent_All .content-listInfomation .contentBlock {
+    height: 72.371%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent img {
+    height: 100%;
+    width: 110%;
+    right: inherit;
+  }
+}
 .container .content .beforeContent_All {
   background-color: #5FB9B0;
 }

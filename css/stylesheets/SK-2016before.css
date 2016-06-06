@@ -18,108 +18,64 @@
   height: 100%;
   top: 0;
   left: 0;
+  display: block;
 }
-.paceBox .loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  perspective: 100px;
-  transform-type: preserve-3d;
-  animation: loader 6s cubic-bezier(0, 0, 1, 1) infinite;
+.paceBox .spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
 }
-.paceBox .loader .dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  width: 20px;
-  height: 20px;
-  margin-top: -90px;
-  margin-left: -10px;
-  border-radius: 10px;
-  background-color: #1e3f57;
-  transform-type: preserve-3d;
-  transform-origin: 50% 90px;
-  transform: rotateZ(30deg);
-  animation: dot-1 1.5s cubic-bezier(0.6, 0, 0.4, 1) infinite;
-}
-.paceBox .loader .dot:nth-child(2) {
-  transform: rotateZ(15deg);
-  animation-name: dot-2;
-  animation-delay: 150ms;
-  background-color: #2B1F31;
-}
-.paceBox .loader .dot:nth-child(3) {
-  transform: rotateZ(0deg);
-  animation-name: dot-3;
-  animation-delay: 300ms;
+.paceBox .cube1,
+.paceBox .cube2 {
   background-color: #413D65;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
 }
-.paceBox .loader .dot:nth-child(4) {
-  transform: rotateZ(-15deg);
-  animation-name: dot-4;
-  animation-delay: 450ms;
-  background-color: #5998b2;
-}
-.paceBox .loader .dot:nth-child(5) {
-  transform: rotateZ(-30deg);
-  animation-name: dot-5;
-  animation-delay: 600ms;
-  background-color: #5FB9B0;
+.paceBox .cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
 }
 
 /* animation */
-@keyframes loader {
-  0% {
-    transform: rotateX(30deg) rotateZ(0deg);
+@-webkit-keyframes sk-cubemove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
   }
   100% {
-    transform: rotateX(30deg) rotateZ(-360deg);
+    -webkit-transform: rotate(-360deg);
   }
 }
-@keyframes dot-1 {
-  0% {
-    transform: rotateZ(30deg) rotateX(10deg);
+@keyframes sk-cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
   }
-  95%,
-        100% {
-    transform: rotateZ(390deg) rotateX(10deg);
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
   }
-}
-@keyframes dot-2 {
-  0% {
-    transform: rotateZ(15deg) rotateX(10deg);
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
   }
-  95%,
-        100% {
-    transform: rotateZ(375deg) rotateX(10deg);
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
   }
-}
-@keyframes dot-3 {
-  0% {
-    transform: rotateZ(0deg) rotateX(10deg);
-  }
-  95%,
-        100% {
-    transform: rotateZ(360deg) rotateX(10deg);
-  }
-}
-@keyframes dot-4 {
-  0% {
-    transform: rotateZ(-15deg) rotateX(10deg);
-  }
-  95%,
-        100% {
-    transform: rotateZ(345deg) rotateX(10deg);
-  }
-}
-@keyframes dot-5 {
-  0% {
-    transform: rotateZ(-30deg) rotateX(10deg);
-  }
-  95%,
-        100% {
-    transform: rotateZ(330deg) rotateX(10deg);
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
   }
 }
 /* Grow */
@@ -154,6 +110,36 @@
   animation-direction: alternate;
 }
 
+.index-instruction {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  background-color: #FFF;
+  border-radius: 100%;
+  -webkit-animation: instruction 1.0s infinite ease-in-out;
+  animation: instruction 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes instruction {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes instruction {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
 @media (min-width: 0px) {
   .mobile-open {
     display: block;
@@ -217,7 +203,7 @@
     color: #3f3c63;
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -252,7 +238,7 @@
     padding: 0 0 10px 0;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
-    margin: 10% auto;
+    margin: 5% auto;
     text-align: center;
     height: 8.235%;
   }
@@ -269,6 +255,16 @@
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent .slideshow-change {
     height: 20px;
     cursor: pointer;
+  }
+}
+@media (min-width: 360px) {
+  .container .content .beforeContent_All .content-listInfomation .contentBlock {
+    width: 90%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
+    margin: 10% auto;
+    text-align: center;
+    height: 8.235%;
   }
 }
 @media (min-width: 1024px) {
@@ -361,21 +357,21 @@
     width: 96%;
     position: absolute;
     right: 4%;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent .mask-cover h2 {
-    font-size: 1rem;
+    font-size: 0.875rem;
     bottom: 15%;
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent .mask-cover p {
-    font-size: 0.875rem;
-    bottom: 22%;
+    font-size: 0.75rem;
+    bottom: 25%;
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent img {
     height: 100%;
     width: auto;
     position: relative;
-    right: 50%;
+    right: 150%;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page {
     margin: 0 auto;
@@ -405,8 +401,7 @@
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .back-list {
     display: block;
-    margin-top: -25px;
-    margin: -25px 4% 0 0;
+    margin: -50px 5% 0 0;
     text-align: right;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .back-list .Keytips {
@@ -414,10 +409,10 @@
     height: 25px;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .back-list span {
-    padding-left: 10px;
-    display: table-caption;
     line-height: 25px;
-    vertical-align: middle;
+    letter-spacing: 1px;
+    float: right;
+    margin: 0 0 0 1%;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .back-list a {
     color: white;
@@ -448,8 +443,21 @@
   .container .content .beforeContent_All .choose-cat-PC .before-listBtn:active {
     color: #ececec;
   }
+  .container .content .beforeContent_All .choose-cat-PC .before-listBtn p {
+    letter-spacing: 1px;
+  }
 }
 @media (min-width: 1200px) {
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .back-list {
+    margin: -25px 4% 0 0;
+  }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page span {
+    padding-left: 10px;
+    display: table-caption;
+    vertical-align: middle;
+    float: inherit;
+    margin: 0;
+  }
   .container .content .beforeContent_All .content-listInfomation .contentBlock {
     height: 72.371%;
     margin: 0 4.5%;
@@ -458,6 +466,16 @@
   }
   .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent {
     width: 14%;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent .mask-cover p {
+    bottom: 22%;
+    font-size: 0.875rem;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent .mask-cover h2 {
+    font-size: 1.125rem;
+  }
+  .container .content .beforeContent_All .content-listInfomation .contentBlock .slideshowInfo .slideShow-Block .slideshow-onecontent img {
+    right: 50%;
   }
   .container .content .beforeContent_All .choose-cat-PC {
     margin: 4% 0;

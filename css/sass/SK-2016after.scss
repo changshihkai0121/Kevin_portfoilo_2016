@@ -4,6 +4,77 @@
 =============================================================================
 **/
 
+@import 'websiteSetting';
+@include _break("mobile") {
+    .container {
+        .content {
+            .beforeContent_All {
+                .content-listInfomation {
+                    .contentBlock {
+                        .slideshowInfo {
+                            .slideShow-Block {
+                                .slideshow-onecontent {
+                                    img {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include _break("padHor") {
+    .container {
+        .content {
+            .beforeContent_All {
+                .content-listInfomation {
+                    .contentBlock {
+                        height: 63.371%;
+                        .slideshowInfo {
+                            .slideShow-Block {
+                                .slideshow-onecontent {
+                                    img {
+                                        height: 100%;
+                                        width: 140%;
+                                        right: inherit;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include _break("desktop") {
+    .container {
+        .content {
+            .beforeContent_All {
+                .content-listInfomation {
+                    .contentBlock {
+                        height: 72.371%;
+                        .slideshowInfo {
+                            .slideShow-Block {
+                                .slideshow-onecontent {
+                                    img {
+                                        height: 100%;
+                                        width: 110%;
+                                        right: inherit;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .container {
     .content {
         .beforeContent_All {

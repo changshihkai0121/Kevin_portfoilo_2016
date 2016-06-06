@@ -15,7 +15,9 @@
                         margin: 0% auto;
                         z-index: 999;
                         .slideshowcontent {
-                            display: none;
+                            #slideshowPrivate {
+                                display: none;
+                            }
                         }
                         .slideshowborder {
                             border: 0px;
@@ -31,7 +33,7 @@
     }
     .BF-container {
         overflow: hidden;
-        width: 90%;
+        width: 80%;
         height: 70%;
         margin: 0 auto;
         margin-top: 5%;
@@ -51,8 +53,8 @@
                 }
                 .BF-block {
                     .BF-Title {
-                        line-height: 60px;
-                        font-size: 1.5rem;
+                        line-height: 45px;
+                        font-size: 1.125rem;
                         letter-spacing: 2px;
                         @include fontsFamily_basicSetting(700);
                         .BF-projectCat {
@@ -73,7 +75,7 @@
     }
     .download-content {
         float: right;
-        display: inline-block;
+        display: none;
         span {
             float: right;
             display: inline-block;
@@ -101,6 +103,25 @@
     }
 }
 
+@include _break("mobile_small") {
+    .BF-container {
+        width: 90%;
+        .slideshowInfo {
+            .content {
+                .BF-block {
+                    .BF-Title {
+                        line-height: 60px;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+    .download-content {
+        display: inline-block;
+    }
+}
+
 @include _break("pad") {
     .BF-container {
         height: 70%;
@@ -125,6 +146,9 @@
                         margin: 0 auto;
                         .slideshowcontent {
                             display: inline-block;
+                            #slideshowPrivate {
+                                display: inherit;
+                            }
                         }
                         .slideshowborder {
                             position: static;
@@ -142,7 +166,7 @@
         width: auto;
         height: 72.371%;
         margin: 0 4.5%;
-        margin-top: 55px;
+        margin-top: 100px;
         margin-right: 20%;
         overflow: hidden;
         padding: 0px;
@@ -176,7 +200,7 @@
                     vertical-align: top;
                     .BF-Title {
                         line-height: inherit;
-                        font-size: 1.25rem;
+                        font-size: 1.1875rem;
                         letter-spacing: 2px;
                         @include fontsFamily_basicSetting(700);
                         .BF-projectCat {
@@ -187,7 +211,7 @@
                         margin-top: 50px;
                         letter-spacing: 2px;
                         line-height: 26px;
-                        font-size: 1.0625rem;
+                        font-size: 0.9375rem;
                         @include fontsFamily_basicSetting(400);
                     }
                 }
@@ -196,4 +220,8 @@
     }
 }
 
-@include _break("desktop") {}
+@include _break("desktop") {
+    .BF-container {
+        margin-top: 55px;
+    }
+}

@@ -34,8 +34,7 @@ $(function() {
             before_default += '<img src=' + beforeData[a].project_mainPic + ' alt=' + beforeData[a].project_title + ' /></li>';
             $slideshowList.html(before_default);
         }
-        // 如果為電腦尺寸則分成6個一組帶入
-    } else {
+    } else { // 電腦尺寸則分成6個一組帶入
         frequency = Math.ceil(beforeData.length / 6);
         roundtime = 0;
         $slideshowList.html('');
@@ -57,7 +56,6 @@ $(function() {
     }
     slideshow_isRetina(); //如果顯示其為retina則換成2倍的圖片
     //自動計算高度及行高
-    //
     var refreshInterval = setInterval(function() {
         slideImgHeight = $('.slideshow-onecontent img').height();
         if (slideImgHeight > 0) {
@@ -253,7 +251,26 @@ function PC_loadInfor(choose) {
         };
         $slideshowList.html(Pc_templateInfo);
         //小於六筆資料
-    } else {
+    } else if (choose == 'i02') {
+        for (var i = 0; i < frequency; i++) { //執行數量為6的倍數
+            Pc_templateInfo += '<div class=' + '"slideShow-Block"' + '>'; //外框
+            if (roundtime == 0 && j <= 6) { //如果為第一層
+                for (var a = roundtime; a < beforeData.length; a++) { //初始值為0 且值必須小於共有幾筆資料
+                    if (choose == beforeData[a].cat_id && j < 6) { //判斷選擇的內容正確且不得大於六則
+                        PC_template(a);
+                        j = j + 1;
+                        roundtime = roundtime + 1;
+                    }
+                };
+            } else if (roundtime < beforeData.length && j >= 6) {
+                for (var a = roundtime; a < PC_datalength; a++) {
+                    PC_template(a);
+                };
+            }
+            Pc_templateInfo += '</div>'; //外框結束
+        };
+        $slideshowList.html(Pc_templateInfo);
+    } else if (choose == 'i01') {
         Pc_templateInfo += '<div class=' + '"slideShow-Block"' + '>';
         for (var a = roundtime; a < PC_datalength; a++) {
             PC_template(a);
@@ -269,19 +286,19 @@ function PC_loadInfor(choose) {
 function PC_template(numA) {
     Pc_templateInfo += '<li class=' + '\"slideshow-onecontent\"' + '>';
     Pc_templateInfo += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '><p>' + beforeData[numA].project_cat + '</p><h2>';
-    Pc_templateInfo += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
+    Pc_templateInfo += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic_PC + ' alt=' + beforeData[numA].project_title + ' /></li>';
 }
 
 function default_template(numA) {
     default_information += '<li class=' + '\"slideshow-onecontent\"' + '>';
     default_information += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '><p>' + beforeData[numA].project_cat + '</p><h2>';
-    default_information += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
+    default_information += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic_PC + ' alt=' + beforeData[numA].project_title + ' /></li>';
 }
 
 function before_template(numA) {
     before_default += '<li class=' + '\"slideshow-onecontent\"' + '>';
     before_default += '<div id=' + beforeData[numA].project_id + ' class=' + '\"mask-cover\"' + 'onClick=' + '\"ChangePage(this.id)\"' + '><p>' + beforeData[numA].project_cat + '</p><h2>';
-    before_default += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic + ' alt=' + beforeData[numA].project_title + ' /></li>';
+    before_default += beforeData[numA].project_title + '</h2></div>' + '<img src=' + beforeData[numA].project_mainPic_PC + ' alt=' + beforeData[numA].project_title + ' /></li>';
 }
 //PC_template end
 
@@ -303,7 +320,7 @@ function slideshow_isRetina() {
 function ChangePage(projectID) {
     projectNum = projectID.split('p', 2)[1]; // 代表點擊的頁面
     pageUrl = '/2016afterInfor.html?pages=yji4qup3ru6' + projectNum;
-    window.location = pageUrl;
+    changePage(pageUrl);
 }
 // change Page location
 

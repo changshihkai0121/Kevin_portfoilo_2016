@@ -15,13 +15,18 @@ var template_Infor = '',
 // auto run script
 $(function() {
     objectSize();
-    BasicWidth = $(window).width(); //Basic width when enter this page
     pageNum = 'p' + windowLocationUrl.split('yji4qup3ru6')[1]; // 得到為第幾個單元的頁面
     // 宣告 通用函數及字串
     var $chooseOption = $('#choose-cat'),
         $choosecatPC = $('#choose-cat-PC'),
+        $chooseslideshowpage = $('.choose-slideshow-page'),
         selectnum = 0;
     // get template
+    // 
+    if (_windowWidth < 1024) {
+        $slideshowPrivate.parent('.slideshowcontent ').hide();
+        $('#slideshowPrivate').hide();
+    }
     for (var i = 0; i < beforeInformation.length; i++) {
         if (beforeInformation[i].project_id === pageNum) {
             template_Information(i, selectnum);
@@ -39,7 +44,7 @@ $(function() {
         content_total = content_width * content_length;
         if (content_length == 1) {
             one_content = content_width;
-            $('.choose-slideshow-page').hide();
+            $chooseslideshowpage.find('.slideshowcontent').hide();
         } else {
             one_content = content_total / content_length;
         }
@@ -51,7 +56,7 @@ $(function() {
         content_total = slideshowHeight * content_length;
         if (content_length == 1) {
             one_content = slideshowHeight;
-            $('.choose-slideshow-page').hide();
+            $chooseslideshowpage.find('.slideshowcontent').hide();
         } else {
             one_content = content_total / content_length;
         }
@@ -85,16 +90,12 @@ $(window).resize(function() {
         }
     }
     resizeWidth = $(window).width();
-    totalgap = BasicWidth - resizeWidth;
-    if (totalgap >= 512 || totalgap <= -512) {
-        window.location.reload();
-    }
 });
 // all into template
 function template_Information(numI, selectnum) {
     add_id = 'contentBox' + selectnum;
     template_Infor += '<div id=' + add_id + ' class=' + '\"content\"' + "><div class=" + '\"BF-image\"' + "><img src=" + beforeInformation[numI].project_Img.img01 + ' alt=' + beforeInformation[numI].project_title;
-    template_Infor += '></div><div class=' + '\"BF-block\"' + '><div class=' + '\"BF-Title\"' + '>' + beforeInformation[numI].project_title + '<span class=' + '\"BF-projectCat\"' + '>' + beforeInformation[numI].project_cat + '</span>';
+    template_Infor += '></div><div class=' + '\"BF-block\"' + '><div class=' + '\"BF-Title\"' + '>' + beforeInformation[numI].project_title;
     template_Infor += '</div><div class=' + '\"BF-Information\"' + '>' + beforeInformation[numI].project_Infor + "</div></div></div>";
 }
 
@@ -143,6 +144,7 @@ function slideshowBtn(projectID) {
                 $slideshowContainer.animate({ 'bottom': slidecounter * one_content });
                 if (slidecounter >= content_length - 1) {
                     $slideshownext.fadeOut();
+                    $slideshowPrivate.parent('.slideshowcontent ').css('display', 'inline-block');
                     $slideshowPrivate.width('100%');
                     $slideshowPrivate.fadeIn();
                 }
@@ -152,6 +154,7 @@ function slideshowBtn(projectID) {
                 $slideshowContainer.animate({ 'bottom': slidecounter * one_content });
                 $slideshownext.fadeIn();
                 $slideshowPrivate.fadeOut();
+                $slideshowPrivate.delay(500).parent('.slideshowcontent ').hide();
                 break
         }
     }

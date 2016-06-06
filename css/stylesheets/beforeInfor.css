@@ -15,7 +15,7 @@
     margin: 0% auto;
     z-index: 999;
   }
-  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent {
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent #slideshowPrivate {
     display: none;
   }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowborder {
@@ -29,7 +29,7 @@
 
   .BF-container {
     overflow: hidden;
-    width: 90%;
+    width: 80%;
     height: 70%;
     margin: 0 auto;
     margin-top: 5%;
@@ -49,8 +49,8 @@
     width: 100%;
   }
   .BF-container .slideshowInfo .content .BF-block .BF-Title {
-    line-height: 60px;
-    font-size: 1.5rem;
+    line-height: 45px;
+    font-size: 1.125rem;
     letter-spacing: 2px;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
@@ -72,7 +72,7 @@
 
   .download-content {
     float: right;
-    display: inline-block;
+    display: none;
   }
   .download-content span {
     float: right;
@@ -99,6 +99,19 @@
     display: inline-block;
   }
 }
+@media (min-width: 360px) {
+  .BF-container {
+    width: 90%;
+  }
+  .BF-container .slideshowInfo .content .BF-block .BF-Title {
+    line-height: 60px;
+    font-size: 1.25rem;
+  }
+
+  .download-content {
+    display: inline-block;
+  }
+}
 @media (min-width: 768px) {
   .BF-container {
     height: 70%;
@@ -114,6 +127,9 @@
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent {
     display: inline-block;
   }
+  .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowcontent #slideshowPrivate {
+    display: inherit;
+  }
   .container .content .beforeContent_All .content-listInfomation .choose-slideshow-page .slideshowborder {
     position: static;
     border-right: 0px;
@@ -127,7 +143,7 @@
     width: auto;
     height: 72.371%;
     margin: 0 4.5%;
-    margin-top: 55px;
+    margin-top: 100px;
     margin-right: 20%;
     overflow: hidden;
     padding: 0px;
@@ -166,7 +182,7 @@
   }
   .BF-container .slideshowInfo .content .BF-block .BF-Title {
     line-height: inherit;
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
     letter-spacing: 2px;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
@@ -179,9 +195,14 @@
     margin-top: 50px;
     letter-spacing: 2px;
     line-height: 26px;
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
     font-family: 'Droid Serif', "Times New Roman", Times serif, Arial, "source-han-sans-traditional", "JhengHei", simhei, sans-serif;
     font-style: normal;
     font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  .BF-container {
+    margin-top: 55px;
   }
 }

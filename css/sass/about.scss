@@ -95,11 +95,11 @@
                             }
                         }
                         .contentrightBox {
-                            padding: 30% 4.69% 0 4.69%;
+                            padding: 0% 4.69% 0 4.69%;
                             width: 90.62%;
                         }
                         .contentleftBox {
-                            padding: 30% 4.69% 0 4.69%;
+                            padding: 22% 4.69% 0 4.69%;
                             width: 90.62%;
                         }
                         .about-content {
@@ -186,6 +186,7 @@
                                     margin: 2% 0;
                                 }
                                 p {
+                                    padding-left: 15px;
                                     font-size: 0.875rem;
                                     color: white;
                                     letter-spacing: 1px;
@@ -229,6 +230,39 @@
                                             font-size: 0.875rem;
                                             color: white;
                                             letter-spacing: 1px;
+                                            line-height: 1rem;
+                                            padding-left: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include _break("mobile_small") {
+    .container {
+        .content {
+            .aboutUs-container {
+                .about-contentInfor {
+                    .aboutcontent {
+                        .right-Information {
+                            .informationContent {
+                                margin: 2% 0 8% 0;
+                            }
+                        }
+                        .contentleftBox {
+                            padding: 30% 4.69% 0 4.69%;
+                        }
+                        .usful-container {
+                            .tools-container {
+                                .tools-content {
+                                    .tools-text {
+                                        p {
                                             line-height: 20px;
                                         }
                                     }
@@ -262,7 +296,7 @@
                             max-height: 75px;
                             width: 70%;
                             text-align: left;
-                            margin: 8% 10% 8% 20%;
+                            margin: 8% 0 8% 20%;
                             display: table;
                         }
                         .contentleft {
@@ -344,8 +378,12 @@
                             display: table-cell;
                             text-align: center;
                             padding: 0px;
-                            .PC-AboutcontentA{margin:0 10% 9% 20%;}
-                            .PC-AboutcontentB{margin:0 10% 18% 20%;}
+                            .PC-AboutcontentA {
+                                margin: 0 10% 9% 0%;
+                            }
+                            .PC-AboutcontentB {
+                                margin: 0 10% 18% 0%;
+                            }
                         }
                         .contentleftBox {
                             width: 50%;
@@ -356,7 +394,7 @@
                         }
                         .Iconleft {
                             text-align: inherit;
-                            width: 30%;
+                            width: auto;
                             float: left;
                             .Imgradius {
                                 width: 65px;
@@ -445,6 +483,7 @@
                                             margin-bottom: 2%;
                                         }
                                         p {
+                                            padding-left: 15px;
                                             font-size: 1rem;
                                             color: white;
                                             letter-spacing: 1px;
@@ -480,16 +519,16 @@
                                     margin: 3% auto;
                                     .tools-text {
                                         display: inline-table;
-                                        width: 26%;
+                                        width: 100%;
                                         height: 85px;
                                         min-height: 85px;
-                                        margin: 0% 10% 2% 20%;
+                                        margin: 0.5% 0 1% 0;
                                         p {
                                             display: inherit;
                                         }
                                     }
                                     .tools-right {
-                                        margin-left: 5%;
+                                        margin-left: 0;
                                     }
                                 }
                             }
@@ -509,4 +548,28 @@
     }
 }
 
-@include _break("desktop") {}
+@include _break("desktop") {
+    .container {
+        .content {
+            .aboutUs-container {
+                .about-contentInfor {
+                    .aboutcontent {
+                        .usful-container {
+                            .tools-container {
+                                .tools-content {
+                                    .tools-text {
+                                        width: 26%;
+                                        margin: 0% 10% 2% 20%;
+                                    }
+                                    .tools-right{
+                                        margin-left: 5%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

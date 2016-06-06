@@ -11,8 +11,12 @@
 @import 'extend'; // setting all extend
 @import 'websiteSetting';
 @include _break("mobile") {
-    .mobile-open{display: block;}
-    .PC-open{display: none;}
+    .mobile-open {
+        display: block;
+    }
+    .PC-open {
+        display: none;
+    }
     .container {
         overflow: hidden;
         .content {
@@ -53,7 +57,7 @@
                         }
                     }
                     .contentBlock {
-                        width: 90%;
+                        width: 80%;
                         margin: 0 auto;
                         overflow: hidden;
                         .slideshowInfo {
@@ -88,7 +92,7 @@
                         }
                     }
                     .choose-slideshow-page {
-                        margin: 10% auto;
+                        margin: 5% auto;
                         text-align: center;
                         height: 8.235%;
                         .Keytips {
@@ -112,11 +116,34 @@
     }
 }
 
+@include _break("mobile_small") {
+    .container {
+        .content {
+            .beforeContent_All {
+                .content-listInfomation {
+                    .contentBlock {
+                        width: 90%;
+                    }
+                    .choose-slideshow-page {
+                        margin: 10% auto;
+                        text-align: center;
+                        height: 8.235%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include _break("pad") {}
 
 @include _break("padHor") {
-    .mobile-open{display: none;}
-    .PC-open{display: block;}
+    .mobile-open {
+        display: none;
+    }
+    .PC-open {
+        display: block;
+    }
     .container {
         .content {
             height: 93%;
@@ -182,22 +209,22 @@
                                             width: 96%;
                                             position: absolute;
                                             right: 4%;
-                                            letter-spacing: 2px;
+                                            letter-spacing: 1px;
                                         }
                                         h2 {
-                                            font-size: 1rem;
+                                            font-size: 0.875rem;
                                             bottom: 15%;
                                         }
                                         p {
-                                            font-size: 0.875rem;
-                                            bottom: 22%;
+                                            font-size: 0.75rem;
+                                            bottom: 25%;
                                         }
                                     }
                                     img {
                                         height: 100%;
                                         width: auto;
                                         position: relative;
-                                        right: 50%;
+                                        right: 150%;
                                     }
                                 }
                             }
@@ -220,18 +247,17 @@
                         }
                         .back-list {
                             display: block;
-                            margin-top: -25px;
-                            margin: -25px 4% 0 0;
+                            margin: -50px 5% 0 0;
                             text-align: right;
                             .Keytips {
                                 display: inline-block;
                                 height: 25px;
                             }
                             span {
-                                padding-left: 10px;
-                                display: table-caption;
                                 line-height: 25px;
-                                vertical-align: middle;
+                                letter-spacing: 1px;
+                                float: right;
+                                margin: 0 0 0 1%;
                             }
                             a {
                                 color: white;
@@ -263,6 +289,9 @@
                         &:active {
                             color: #ececec;
                         }
+                        p {
+                            letter-spacing: 1px;
+                        }
                     }
                 }
             }
@@ -275,6 +304,18 @@
         .content {
             .beforeContent_All {
                 .content-listInfomation {
+                    .choose-slideshow-page {
+                        .back-list {
+                            margin: -25px 4% 0 0;
+                        }
+                        span {
+                            padding-left: 10px;
+                            display: table-caption;
+                            vertical-align: middle;
+                            float: inherit;
+                            margin: 0;
+                        }
+                    }
                     .contentBlock {
                         height: 72.371%;
                         margin: 0 4.5%;
@@ -284,6 +325,18 @@
                             .slideShow-Block {
                                 .slideshow-onecontent {
                                     width: 14%;
+                                    .mask-cover {
+                                        p {
+                                            bottom: 22%;
+                                            font-size: 0.875rem
+                                        }
+                                        h2 {
+                                            font-size: 1.125rem;
+                                        }
+                                    }
+                                    img {
+                                        right: 50%;
+                                    }
                                 }
                             }
                         }

@@ -186,108 +186,64 @@ p {
   height: 100%;
   top: 0;
   left: 0;
+  display: block;
 }
-.paceBox .loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  perspective: 100px;
-  transform-type: preserve-3d;
-  animation: loader 6s cubic-bezier(0, 0, 1, 1) infinite;
+.paceBox .spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
 }
-.paceBox .loader .dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  width: 20px;
-  height: 20px;
-  margin-top: -90px;
-  margin-left: -10px;
-  border-radius: 10px;
-  background-color: #1e3f57;
-  transform-type: preserve-3d;
-  transform-origin: 50% 90px;
-  transform: rotateZ(30deg);
-  animation: dot-1 1.5s cubic-bezier(0.6, 0, 0.4, 1) infinite;
-}
-.paceBox .loader .dot:nth-child(2) {
-  transform: rotateZ(15deg);
-  animation-name: dot-2;
-  animation-delay: 150ms;
-  background-color: #2B1F31;
-}
-.paceBox .loader .dot:nth-child(3) {
-  transform: rotateZ(0deg);
-  animation-name: dot-3;
-  animation-delay: 300ms;
+.paceBox .cube1,
+.paceBox .cube2 {
   background-color: #413D65;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
 }
-.paceBox .loader .dot:nth-child(4) {
-  transform: rotateZ(-15deg);
-  animation-name: dot-4;
-  animation-delay: 450ms;
-  background-color: #5998b2;
-}
-.paceBox .loader .dot:nth-child(5) {
-  transform: rotateZ(-30deg);
-  animation-name: dot-5;
-  animation-delay: 600ms;
-  background-color: #5FB9B0;
+.paceBox .cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
 }
 
 /* animation */
-@keyframes loader {
-  0% {
-    transform: rotateX(30deg) rotateZ(0deg);
+@-webkit-keyframes sk-cubemove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
   }
   100% {
-    transform: rotateX(30deg) rotateZ(-360deg);
+    -webkit-transform: rotate(-360deg);
   }
 }
-@keyframes dot-1 {
-  0% {
-    transform: rotateZ(30deg) rotateX(10deg);
+@keyframes sk-cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
   }
-  95%,
-        100% {
-    transform: rotateZ(390deg) rotateX(10deg);
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
   }
-}
-@keyframes dot-2 {
-  0% {
-    transform: rotateZ(15deg) rotateX(10deg);
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
   }
-  95%,
-        100% {
-    transform: rotateZ(375deg) rotateX(10deg);
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
   }
-}
-@keyframes dot-3 {
-  0% {
-    transform: rotateZ(0deg) rotateX(10deg);
-  }
-  95%,
-        100% {
-    transform: rotateZ(360deg) rotateX(10deg);
-  }
-}
-@keyframes dot-4 {
-  0% {
-    transform: rotateZ(-15deg) rotateX(10deg);
-  }
-  95%,
-        100% {
-    transform: rotateZ(345deg) rotateX(10deg);
-  }
-}
-@keyframes dot-5 {
-  0% {
-    transform: rotateZ(-30deg) rotateX(10deg);
-  }
-  95%,
-        100% {
-    transform: rotateZ(330deg) rotateX(10deg);
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
   }
 }
 /* Grow */
@@ -322,6 +278,36 @@ p {
   animation-direction: alternate;
 }
 
+.index-instruction {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  background-color: #FFF;
+  border-radius: 100%;
+  -webkit-animation: instruction 1.0s infinite ease-in-out;
+  animation: instruction 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes instruction {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes instruction {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
 .container {
   width: 100%;
   height: 100%;
@@ -337,6 +323,28 @@ p {
 }
 
 @media (min-width: 0px) {
+  .logo img {
+    width: 50%;
+  }
+
+  .mobile-click {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    top: 60%;
+    z-index: 99999;
+  }
+
+  .paceBox .spinner {
+    margin: 70% auto;
+  }
+
+  .instruction {
+    display: none;
+  }
+
   .container .content {
     width: 100%;
     height: 100%;
@@ -410,11 +418,11 @@ p {
     z-index: 1;
     top: 55px;
     font-size: 2rem;
-    color: #666;
+    color: #F00;
   }
   .container .content .toogle-Btn input:checked + label:after {
     bottom: 9px;
-    color: #aaa;
+    color: #00FFB1;
     text-shadow: none;
     z-index: 4;
     font-size: 2rem;
@@ -450,7 +458,7 @@ p {
     left: 0;
     z-index: 4;
     font-size: 2rem;
-    color: #aaa;
+    color: #F00;
   }
   .container .content .toogle-Btn label:after {
     content: attr(data-on);
@@ -458,19 +466,63 @@ p {
     right: 0;
     bottom: 55px;
     left: 0;
-    color: #666;
+    color: #00FFB1;
     text-shadow: 0 -1px 0 #eee;
     font-size: 2rem;
   }
-  .container .content .touchBox {
-    display: none;
+  .container .content #touchBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
 
   .copyright p {
     font-size: 0.5rem;
   }
 }
+@media (min-width: 360px) {
+  .logo img {
+    width: auto;
+  }
+}
 @media (min-width: 1024px) {
+  .mobile-click {
+    display: none;
+  }
+
+  .paceBox .spinner {
+    margin: 25% auto;
+  }
+
+  .instruction {
+    z-index: 99;
+    position: absolute;
+    display: table;
+    width: 96%;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 22% auto;
+  }
+  .instruction .instruction-left {
+    display: table-cell;
+    float: left;
+    width: 30%;
+  }
+  .instruction .instruction-left p {
+    text-align: center;
+  }
+  .instruction .instruction-right {
+    display: table-cell;
+    float: right;
+    width: 30%;
+  }
+  .instruction .instruction-right p {
+    text-align: center;
+  }
+  .instruction .instruction-about {
+    text-align: center;
+    margin-top: 30%;
+  }
+
   #header {
     top: 75px;
   }
@@ -660,11 +712,15 @@ p {
   }
 
   .copyright p {
-    font-size: 0.9375rem;
+    font-size: 0.625rem;
   }
 }
 @media (min-width: 1200px) {
   .container .content .countent-Time .contentChange .move-Icon p {
     font-size: 10.394rem;
+  }
+
+  .instruction .instruction-about {
+    margin-top: 8%;
   }
 }

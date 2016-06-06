@@ -12,7 +12,6 @@ var $chooseOption = $('#choose-cat'), // post choose-cat option information
     slidepage = 0;
 
 $(function() {
-    BasicWidth = $(window).width();
     // past option pc & mobile is different template
     // option 內容
     for (i = 0; i < beforeIndex.length; i++) {
@@ -302,7 +301,7 @@ function slideshow_isRetina() {
 function ChangePage(projectID) {
     projectNum = projectID.split('p', 2)[1]; // 代表點擊的頁面
     pageUrl = '/2016beforeInfo.html?pages=yji4qup3ru6' + projectNum;
-    window.location = pageUrl;
+    changePage(pageUrl);
 }
 // change Page location
 
@@ -313,10 +312,5 @@ $(window).resize(function() {
     $('.choose-slideshow-page').css('line-height', chooseHeight + 'px');
     if (_windowWidth <= 768) {
         $('.contentBlock').css('height', slideImgHeight);
-    }
-    resizeWidth = $(window).width();
-    totalgap = BasicWidth - resizeWidth;
-    if (totalgap >= 512 || totalgap <= -512) {
-        window.location.reload();
     }
 });

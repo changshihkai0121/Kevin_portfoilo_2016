@@ -27,49 +27,56 @@ var beforeData = [
 	'cat_id':'i01',
 	'project_title':'台北設計之都',
 	'project_cat':'官方網站',
-	'project_mainPic':'/images/i11@1x.jpg'
+	'project_mainPic':'/images/i11@1x.jpg',
+	'project_mainPic_PC': '/images/i11a@1x.jpg'
 },
 {
 	'project_id':'p01',
 	'cat_id':'i01',
 	'project_title':'上海時光弄堂',
 	'project_cat':'官方網站',
-	'project_mainPic':'/images/i12@1x.jpg'
+	'project_mainPic':'/images/i12@1x.jpg',
+	'project_mainPic_PC': '/images/i12a@1x.jpg'
 },
 {
 	'project_id':'p02',
 	'cat_id':'i01',
 	'project_title':'Simula Inc.',
 	'project_cat':'官方網站',
-	'project_mainPic':'/images/i13@1x.jpg'
+	'project_mainPic':'/images/i13@1x.jpg',
+	'project_mainPic_PC': '/images/i13a@1x.jpg'
 },
 {
 	'project_id':'p03',
-	'cat_id':'i02',
+	'cat_id':'i01',
 	'project_title':'HORAGE',
 	'project_cat':'官方網站',
-	'project_mainPic':'/images/i14@1x.jpg'
+	'project_mainPic':'/images/i14@1x.jpg',
+	'project_mainPic_PC': '/images/i14a@1x.jpg'
 },
 {
 	'project_id':'p04',
 	'cat_id':'i01',
 	'project_title':'寶島客家電台',
 	'project_cat':'官方網站',
-	'project_mainPic':'/images/i15@1x.jpg'
+	'project_mainPic':'/images/i15@1x.jpg',
+	'project_mainPic_PC': '/images/i15a@1x.jpg'
 },
 {
 	'project_id':'p05',
 	'cat_id':'i01',
 	'project_title':'天鷹保全',
 	'project_cat':'官方網站',
-	'project_mainPic':'/images/i17@1x.jpg'
+	'project_mainPic':'/images/i17@1x.jpg',
+	'project_mainPic_PC': '/images/i17a@1x.jpg'
 },
 {
 	'project_id':'p06',
 	'cat_id':'i02',
 	'project_title':'Passion Bag',
 	'project_cat':'電商網站',
-	'project_mainPic':'/images/i16@1x.jpg'
+	'project_mainPic':'/images/i16@1x.jpg',
+	'project_mainPic_PC': '/images/i16a@1x.jpg'
 }
 ];
 var beforeInformation = [
